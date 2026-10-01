@@ -1,0 +1,166 @@
+.contact {
+  padding: 60px 8%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.contact-header p {
+  color: #666;
+  font-size: 18px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+}
+
+.contact-info,
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h2,
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.contact-info > p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  margin-bottom: 25px;
+}
+
+.contact-item h3 {
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  color: #666;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-bottom: 7px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #2563eb;
+}
+
+.contact-form button {
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #1d4ed8;
+}
+
+ /* =========================
+    DARK MODE - CONTACT
+    ========================= */
+
+.dark-mode .contact {
+  background: #0f172a;
+}
+
+.dark-mode .contact-header h1 {
+  color: #f8fafc;
+}
+
+.dark-mode .contact-header p {
+  color: #cbd5e1;
+}
+
+.dark-mode .contact-info,
+.dark-mode .contact-form {
+  background: #1e293b;
+}
+
+.dark-mode .contact-info h2,
+.dark-mode .contact-form h2 {
+  color: #f8fafc;
+}
+
+.dark-mode .contact-info > p {
+  color: #cbd5e1;
+}
+
+.dark-mode .contact-item h3 {
+  color: #f8fafc;
+}
+
+.dark-mode .contact-item p {
+  color: #cbd5e1;
+}
+
+.dark-mode .contact-form label {
+  color: #f8fafc;
+}
+
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background: #0f172a;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+.dark-mode .contact-form input::placeholder,
+.dark-mode .contact-form textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+  .contact {
+    padding: 40px 5%;
+  }
+
+  .contact-header h1 {
+    font-size: 32px;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+}

@@ -1,0 +1,137 @@
+.course-details {
+  padding: 50px 8%;
+}
+
+.details-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.details-header h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.details-header p {
+  color: #666;
+  font-size: 18px;
+}
+
+.details-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.details-main {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.details-main h2 {
+  margin-bottom: 15px;
+}
+
+.details-main ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details-main li {
+  margin: 15px 0;
+}
+
+.details-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.details-card p {
+  margin: 18px 0;
+}
+
+.details-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+}
+
+.details-card button:hover {
+  background: #1d4ed8;
+}
+
+.course-not-found {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+/* =========================
+   DARK MODE - COURSE DETAILS
+   ========================= */
+
+.dark-mode .course-details {
+  background: #0f172a;
+}
+
+.dark-mode .details-header h1 {
+  color: #f8fafc;
+}
+
+.dark-mode .details-header p {
+  color: #cbd5e1;
+}
+
+.dark-mode .details-main {
+  background: #1e293b;
+}
+
+.dark-mode .details-main h2 {
+  color: #f8fafc;
+}
+
+.dark-mode .details-main li {
+  color: #cbd5e1;
+}
+
+.dark-mode .details-card {
+  background: #1e293b;
+}
+
+.dark-mode .details-card h2 {
+  color: #f8fafc;
+}
+
+.dark-mode .details-card p {
+  color: #cbd5e1;
+}
+
+.dark-mode .course-not-found {
+  color: #f8fafc;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .details-container {
+    grid-template-columns: 1fr;
+  }
+
+  .details-header h1 {
+    font-size: 32px;
+  }
+
+  .course-details {
+    padding: 30px 5%;
+  }
+}

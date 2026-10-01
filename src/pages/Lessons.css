@@ -1,0 +1,117 @@
+
+.lessons-page {
+  min-height: 100vh;
+  padding: 30px;
+  background: #f8fafc;
+}
+
+.lessons-page h1 {
+  margin: 0 0 8px;
+  color: #1e293b;
+}
+
+.lessons-page > p {
+  color: #64748b;
+}
+
+.lessons-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.lesson-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  transition: 0.3s;
+}
+
+.lesson-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-card h2 {
+  margin: 0 0 8px;
+  font-size: 19px;
+  color: #1e293b;
+}
+
+.lesson-card p {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.start-lesson-btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+.start-lesson-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   DARK MODE - LESSONS
+   ========================= */
+
+.dark-mode .lessons-page {
+  background: #0f172a;
+}
+
+.dark-mode .lessons-page h1 {
+  color: #f8fafc;
+}
+
+.dark-mode .lessons-page > p {
+  color: #cbd5e1;
+}
+
+.dark-mode .lesson-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.dark-mode .lesson-card h2 {
+  color: #f8fafc;
+}
+
+.dark-mode .lesson-card p {
+  color: #cbd5e1;
+}
+/* Responsive Dising */
+@media (max-width: 700px) {
+  .lessons-container {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .start-lesson-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}

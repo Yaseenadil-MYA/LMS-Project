@@ -1,0 +1,137 @@
+.my-courses-page {
+  padding: 30px;
+  background-color: #f8f2fc;
+  min-height: 100vh;
+}
+.my-courses-page h1 {
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+.my-course-card h2 {
+  margin: 0 0 15px;
+  font-size: 21px;
+  color: #1e293b;
+}
+.my-courses-page > p {
+  /* background-color: #64748b; */
+  margin-bottom: 30px;
+}
+
+.my-courses-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.my-course-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+.my-course-card {
+  margin: 8px 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+/* progress bar */
+.course-progress {
+  margin-top: 15px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 9px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+.course-progress span {
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #475569;
+}
+/* progress button */
+.continue-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.continue-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+/* =========================
+   DARK MODE - MY COURSES
+   ========================= */
+
+.dark-mode .my-courses-page {
+  background: #0f172a;
+}
+
+.dark-mode .my-courses-page h1 {
+  color: #f8fafc;
+}
+
+.dark-mode .my-courses-page > p {
+  color: #cbd5e1;
+}
+
+.dark-mode .my-course-card {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+.dark-mode .my-course-card h2 {
+  color: #f8fafc;
+}
+
+.dark-mode .my-course-card p {
+  color: #cbd5e1;
+}
+
+.dark-mode .progress-bar {
+  background: #475569;
+}
+
+.dark-mode .course-progress span {
+  color: #cbd5e1;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .my-courses-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .my-courses-page {
+    padding: 20px;
+  }
+
+  .my-courses-container {
+    grid-template-columns: 1fr;
+  }
+}

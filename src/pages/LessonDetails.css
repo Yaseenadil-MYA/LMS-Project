@@ -1,0 +1,158 @@
+.lesson-details {
+  min-height: 100vh;
+  padding: 40px;
+  background: #f8fafc;
+  box-sizing: border-box;
+}
+
+.lesson-details h1 {
+  margin-bottom: 20px;
+  color: #2563eb;
+  font-size: 28px;
+}
+
+.lesson-details h2 {
+  margin-bottom: 15px;
+  color: #1e293b;
+  font-size: 24px;
+}
+
+.lesson-details p {
+  max-width: 700px;
+  line-height: 1.7;
+  color: #64748b;
+  font-size: 16px;
+}
+
+
+/* Lesson Progress */
+
+.lesson-progress {
+  max-width: 700px;
+  margin-top: 25px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #2563eb;
+  border-radius: 10px;
+  transition: width 0.4s ease;
+}
+
+
+/* Complete Button */
+
+.complete-btn {
+  margin-top: 25px;
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.complete-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+
+/* Previous / Next Navigation */
+
+.lesson-navigation {
+  max-width: 700px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.lesson-navigation button {
+  padding: 11px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.lesson-navigation button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   DARK MODE - LESSON DETAILS
+   ========================= */
+
+.dark-mode .lesson-details {
+  background: #0f172a;
+}
+
+.dark-mode .lesson-details h1,
+.dark-mode .lesson-details h2 {
+  color: #f8fafc;
+}
+
+.dark-mode .lesson-details p {
+  color: #cbd5e1;
+}
+
+.dark-mode .progress-info {
+  color: #cbd5e1;
+}
+
+.dark-mode .progress-bar {
+  background: #475569;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+  .lesson-details {
+    padding: 20px;
+  }
+
+  .lesson-details h1 {
+    font-size: 24px;
+  }
+
+  .lesson-details h2 {
+    font-size: 20px;
+  }
+
+  .lesson-navigation {
+    flex-direction: column;
+  }
+
+  .lesson-navigation button {
+    width: 100%;
+  }
+
+}
