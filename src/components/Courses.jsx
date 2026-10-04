@@ -28,31 +28,8 @@ const Courses = () => {
       duration: "10 Weeks",
       level: "Intermediate",
     },
-    {
-      id: 4,
-      title: "React js",
-      description: "Learn react js and build modern web Aplication.",
-      students: 120,
-      duration: "8 Weeks",
-      level: "Beginner",
-    },
-
-    {
-      id: 5,
-      title: "php",
-      description: "Learn PHP and build powerful backend applications.",
-      students: 100,
-      duration: "8 Weeks",
-      level: "Beginner",
-    },
-    {
-      id: 6,
-      title: "My SQL",
-      description: "Learn MySQL and manage databases professionally.",
-      students: 90,
-      duration: "6 Weeks",
-      level: "Beginner",
-    },
+  
+    
   ];
   return (
     <section className="courses">

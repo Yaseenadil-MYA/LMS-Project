@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Hero.css";
+import { Link } from "react-router-dom";
 import learning1 from "../images/learning1.jpg";
 import learning2 from "../images/learning2.jpg";
 import learning3 from "../images/learning3.jpg";
@@ -47,7 +48,9 @@ const Hero = () => {
           Learn new skills and improve your knowledge.
         </p>
 
-        <button>Explore Courses</button>
+        <Link to="/courses">
+          <button>Explore Courses</button>
+        </Link>
       </div>
     </section>
   );
