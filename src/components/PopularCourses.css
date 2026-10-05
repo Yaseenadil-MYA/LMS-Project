@@ -66,8 +66,18 @@
   background: #1d4ed8;
 }
 
-.popular-courses > div:last-child {
+.view-all-courses {
   margin-top: 35px;
+}
+
+.view-all-courses a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.view-all-courses a:hover {
+  text-decoration: underline;
 }
 
 .popular-courses > div:last-child a {

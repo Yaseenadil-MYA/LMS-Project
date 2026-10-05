@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 import "./Hero.css";
 import { Link } from "react-router-dom";
 import learning1 from "../images/learning1.jpg";
@@ -12,6 +14,8 @@ import learning8 from "../images/learning8.jpg";
 
 const Hero = () => {
   const images = [learning1, learning2, learning3, learning4, learning5, learning6, learning7, learning8];
+  // Get Language information from LanguageContext
+  const { t } = useContext(LanguageContext);
   
     
 
@@ -41,15 +45,14 @@ const Hero = () => {
 
       {/* Hero Content */}
       <div className="hero-content">
-        <h1>Learn. Grow. Succeed</h1>
+        <h1>{t.hero.title}</h1>
 
         <p>
-          Welcome to our Learning Management System.
-          Learn new skills and improve your knowledge.
+         {t.hero.description}
         </p>
 
         <Link to="/courses">
-          <button>Explore Courses</button>
+          <button>{t.hero.button}</button>
         </Link>
       </div>
     </section>

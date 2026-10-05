@@ -1,29 +1,32 @@
 import React from "react";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 import "./Stats.css";
 
 const Stats = () => {
-  const stats = [
-    {
-      number: "500+",
-      title: "Students",
-      icon: "👨‍🎓",
-    },
-    {
-      number: "6",
-      title: "Courses",
-      icon: "📚",
-    },
-    {
-      number: "100+",
-      title: "Lessons",
-      icon: "📝",
-    },
-    {
-      number: "95%",
-      title: "Success Rate",
-      icon: "🏆",
-    },
-  ];
+  const { t } = useContext(LanguageContext);
+const stats = [
+  {
+    number: "500+",
+    title: t.stats.students,
+    icon: "👨‍🎓",
+  },
+  {
+    number: "6",
+    title: t.stats.courses,
+    icon: "📚",
+  },
+  {
+    number: "100+",
+    title: t.stats.lessons,
+    icon: "📝",
+  },
+  {
+    number: "95%",
+    title: t.stats.success,
+    icon: "🏆",
+  },
+];
 
   return (
     <section className="stats">

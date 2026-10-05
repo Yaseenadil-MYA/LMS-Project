@@ -1,20 +1,19 @@
 import React from "react";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
 import "./CTA.css";
 
 const CTA = () => {
+  const { t } = useContext(LanguageContext);
   return (
     <section className="cta">
       <div className="cta-content">
-        <h2>Ready to Start Learning?</h2>
+        <h2>{t.cta.title}</h2>
 
-        <p>
-          Start your learning journey today and build new skills for your future.
-        </p>
+        <p>{t.cta.description}</p>
 
-        <Link to="/courses">
-          Explore Courses
-        </Link>
+        <Link to="/courses">{t.cta.button}</Link>
       </div>
     </section>
   );

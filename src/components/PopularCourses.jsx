@@ -1,8 +1,11 @@
 import React from "react";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 import { Link } from "react-router-dom";
 import "./PopularCourses.css";
 
 const PopularCourses = () => {
+  const { t } = useContext(LanguageContext);
   const courses = [
     {
       id: 1,
@@ -32,8 +35,8 @@ const PopularCourses = () => {
 
   return (
     <section className="popular-courses">
-      <h2>Popular Courses</h2>
-      <p>Start learning with our most popular courses.</p>
+      <h2>{t.popularCourses.title}</h2>
+      <p>{t.popularCourses.description}</p>
 
       <div className="popular-container">
         {courses.map((course) => (
@@ -49,14 +52,14 @@ const PopularCourses = () => {
             </div>
 
             <Link to={`/courses/${course.id}`}>
-              View Course
+              {t.popularCourses.viewCourse}
             </Link>
           </div>
         ))}
       </div>
 
-      <div>
-        <Link to="/courses">View All Courses</Link>
+      <div className="view-all-courses">
+        <Link to="/courses">{t.popularCourses.viewAll}</Link>
       </div>
     </section>
   );

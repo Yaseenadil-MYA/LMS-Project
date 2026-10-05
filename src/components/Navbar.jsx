@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 
 import { ThemeContext } from "../context/ThemeContext";
+import { LanguageContext } from "../context/LanguageContext";
 
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
@@ -14,6 +15,8 @@ function Navbar() {
 
   // Get Theme information from ThemeContext
   const { darkMode, toggleTheme } = useContext(ThemeContext);
+  // Get Language information from LanguageContext
+  const { language, changeLanguage,t } = useContext(LanguageContext);
 
   return (
     <nav className="navbar">
@@ -30,43 +33,57 @@ function Navbar() {
       {/* Navigation Links */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <Link to="/" className={location.pathname === "/" ? "active" : ""}>
-          Home
+          {t.navbar.home}
         </Link>
 
         <Link
           to="/courses"
           className={location.pathname === "/courses" ? "active" : ""}
         >
-          Courses
+          {t.navbar.courses}
         </Link>
 
-         <Link
+        <Link
           to="/about"
           className={location.pathname === "/about" ? "active" : ""}
         >
-          About
+          {t.navbar.about}
         </Link>
 
-          <Link
+        <Link
           to="/contact"
           className={location.pathname === "/contact" ? "active" : ""}
         >
-          Contact
+          {t.navbar.contact}
         </Link>
       </ul>
 
       {/* Navbar Buttons */}
       <div className={`nav-buttons ${menuOpen ? "active" : ""}`}>
+        {/* Language Selector */}
+        <select
+          value={language}
+          onChange={(e) => changeLanguage(e.target.value)}
+          className="language-select"
+        >
+          <option value="en">English</option>
+          <option value="ps">پښتو</option>
+          <option value="fa">دری</option>
+        </select>
         {/* Dark / Light Mode */}
         <button onClick={toggleTheme}>
           {darkMode ? "☀️ Light" : "🌙 Dark"}
         </button>
 
         {/* Login */}
-        <button onClick={() => navigate("/login")}>Login</button>
+        <button onClick={() => navigate("/login")}>
+          {t.navbar.login}
+        </button>
 
         {/* Register */}
-        <button onClick={() => navigate("/register")}>Register</button>
+        <button onClick={() => navigate("/register")}>
+          {t.navbar.register}
+        </button>
       </div>
     </nav>
   );

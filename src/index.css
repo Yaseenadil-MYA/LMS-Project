@@ -93,6 +93,30 @@ main {
   font-size: 28px;
   cursor: pointer;
 }
+/* Language Selector */
+.language-select {
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  background: #2563eb;
+  /* color: #334155; */
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.language-select:hover {
+  border-color: #2563eb;
+}
+
+.dark-mode .language-select {
+  background: #1e293b;
+  color: #e2e8f0;
+  border-color: #475569;
+}
 
 /* Mobile Responsive */
 
@@ -100,6 +124,9 @@ main {
   .navbar {
     padding: 15px 20px;
     flex-wrap: wrap;
+    .language-select {
+      padding: 8px 10px;
+    }
   }
 
   .menu-btn {
@@ -182,5 +209,3 @@ main {
 .dark-mode p {
   color: #f8fafc;
 }
-
-

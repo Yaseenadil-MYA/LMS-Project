@@ -1,37 +1,38 @@
 import React from "react";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 import "./WhyChooseUs.css";
 
 const WhyChooseUs = () => {
+  const { t } = useContext(LanguageContext);
   const features = [
     {
       icon: "📚",
-      title: "Quality Courses",
-      description: "Learn useful skills through well-structured courses.",
+      title: t.whyChoose.quality,
+      description: t.whyChoose.qualityText,
     },
     {
       icon: "👨‍🎓",
-      title: "Learn at Your Pace",
-      description: "Study anytime and continue learning at your own pace.",
+      title: t.whyChoose.pace,
+      description: t.whyChoose.paceText,
     },
     {
       icon: "💻",
-      title: "Practical Learning",
-      description: "Practice what you learn and build real projects.",
+      title: t.whyChoose.practical,
+      description: t.whyChoose.practicalText,
     },
     {
       icon: "🏆",
-      title: "Track Your Progress",
-      description: "Monitor your learning progress and complete lessons.",
+      title: t.whyChoose.progress,
+      description: t.whyChoose.progressText,
     },
   ];
 
   return (
     <section className="why-choose">
       <div className="why-header">
-        <h2>Why Choose Our LMS?</h2>
-        <p>
-          Everything you need to learn new skills and achieve your goals.
-        </p>
+        <h2>{t.whyChoose.title}</h2>
+        <p>{t.whyChoose.description}</p>
       </div>
 
       <div className="why-container">
