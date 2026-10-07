@@ -1,62 +1,65 @@
 import React from "react";
 import "./CoursesPage.css";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 
-const courses = () => {
+const Curses = () => {
+  const { t } = useContext(LanguageContext);
   const courses = [
     {
       id: 1,
-      title: "HTML",
-      description: "Learn HTML and build modern web Sructrue.",
+      title: t.courses.html.title,
+      description: t.courses.html.description,
       students: 110,
-      duration: "5 Weeks",
+      duration: "5",
       level: "Beginner",
     },
     {
       id: 2,
-      title: "CSS",
-      description: "Learn CSS and build modern website.",
+      title: t.courses.css.title,
+      description: t.courses.css.description,
       students: 130,
-      duration: "7 Weeks",
+      duration: "7 ",
       level: "Beginner",
     },
     {
       id: 3,
-      title: "React js",
-      description: "learn react js and build modern web Application.",
-      student: 120,
-      duration: "8 weeks",
+      title: t.courses.react.title,
+      description: t.courses.react.description,
+      students: 120,
+      duration: "8",
       level: "Begninnr",
     },
     {
       id: 4,
-      title: "javascript",
-      description: "learn javascript from basic to advance cencept.",
-      student: 100,
-      duration: "10 weeks",
-      level: "intermediate",
+      title: t.courses.javascript.title,
+      description: t.courses.javascript.description,
+      students: 100,
+      duration: "10",
+      level: "ّIntermediate",
     },
     {
       id: 5,
-      title: "PHP",
-      description: "learn php from basic to advance cencept.",
-      student:90,
-      duration: "10 weeks",
+      title: t.courses.php.title,
+      description: t.courses.php.description,
+      students: 90,
+      duration: "10",
       level: "Bignner",
     },
     {
       id: 6,
-      title: "MySQL",
-      description: "Learn MySQL and manage databases professionally.",
+      title: t.courses.mysql.title,
+      description: t.courses.mysql.description,
       students: 90,
-      duration: "6 Weeks",
+      duration: "6",
       level: "Beginner",
     },
   ];
   return (
     <main className="courses-page">
-      <h1>Our courses</h1>
-      <p>Explor our courses and start lerning new skills.</p>
+      <h1>{t.courses.title}</h1>
+      <p>{t.courses.description}</p>
 
       <div className="cours-container">
         {courses.map((course) => (
@@ -64,16 +67,22 @@ const courses = () => {
             <h2>{course.title}</h2>
             <p>{course.description}</p>
             <div className="cours-inpo">
-              <p>👨‍🎓 {course.students} Students</p>
-              <p>⏱ {course.duration}</p>
-              <p>📊 {course.level}</p>
+              <p>
+                👨‍🎓 {course.students} {t.courses.students}
+              </p>
+              <p>
+                ⏱ {course.duration} {t.courses.weeks}
+              </p>
+              <p>
+                📊{" "}
+                {course.level === "Beginner"
+                  ? t.courses.beginner
+                  : t.courses.intermediate}
+              </p>
             </div>
             <Link to={`/courses/${course.id}`}>
-            
-            <button>View Courses</button>
+              <button>{t.courses.viewCourse}</button>
             </Link>
-         
-         
           </div>
         ))}
       </div>
@@ -81,4 +90,4 @@ const courses = () => {
   );
 };
 
-export default courses;
+export default Curses;

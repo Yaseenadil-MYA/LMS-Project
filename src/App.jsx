@@ -22,29 +22,28 @@ const App = () => {
   const { darkMode } = useContext(ThemeContext);
   return (
     <div className={darkMode ? "dark-mode" : "light-mode"}>
-    <BrowserRouter>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/courses" element={<Curses />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contect />} />
-        <Route path="login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/courses/:id" element={<CourseDetails />} />
-        <Route path="/studentdashboard" element={<StudentDashboard />} />
-        <Route path="/my-courses" element={<Mycourses />} />
-        <Route path="/lessons/:id" element={<Lessons />} />
-        <Route
-          path="/lessons/:courseId/lesson/:lessonId"
-          element={<LessonDetails />}
-        />
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/courses" element={<Curses />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contect />} />
+          <Route path="login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/courses/:id" element={<CourseDetails />} />
+          <Route path="/studentdashboard" element={<StudentDashboard />} />
+          <Route path="/my-courses" element={<Mycourses />} />
+          <Route path="/lessons/:id" element={<Lessons />} />
+          <Route
+            path="/lessons/:courseId/lesson/:lessonId"
+            element={<LessonDetails />}
+          />
 
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-    
   );
 };
 

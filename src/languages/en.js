@@ -42,21 +42,63 @@ const en = {
       "Start your learning journey today and build new skills for your future.",
     button: "Explore Courses",
   },
-  stats: {
+stats: {
   students: "Students",
   courses: "Courses",
   lessons: "Lessons",
   success: "Success Rate",
 },
 
-  footer: {
-    description:
-      "Learn new skills, improve your knowledge, and build your future with our LMS.",
-    quickLinks: "Quick Links",
-    learning: "Learning",
-    popularCourses: "Popular Courses",
-    rights: "All rights reserved.",
+footer: {
+  description:
+    "Learn new skills, improve your knowledge, and build your future with our LMS.",
+  quickLinks: "Quick Links",
+  learning: "Learning",
+  popularCourses: "Popular Courses",
+  rights: "All rights reserved.",
+},
+
+// COURSES PAGE
+courses: {
+  title: "Our Courses",
+  description: "Explore our popular courses and start learning today.",
+
+  students: "Students",
+  weeks: "Weeks",
+  beginner: "Beginner",
+  intermediate: "Intermediate",
+  viewCourse: "View Course",
+
+  html: {
+    title: "HTML",
+    description: "Learn HTML and build modern web structure.",
   },
+
+  css: {
+    title: "CSS",
+    description: "Learn CSS and build modern websites.",
+  },
+
+  javascript: {
+    title: "JavaScript",
+    description: "Learn JavaScript from basic concepts to advanced topics.",
+  },
+
+  react: {
+    title: "React",
+    description: "Learn React and build modern user interfaces.",
+  },
+
+  php: {
+    title: "PHP",
+    description: "Learn PHP and build dynamic web applications.",
+  },
+
+  mysql: {
+    title: "MySQL",
+    description: "Learn MySQL and manage databases efficiently.",
+  },
+},
 };
 
 export default en;

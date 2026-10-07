@@ -9,26 +9,27 @@ const PopularCourses = () => {
   const courses = [
     {
       id: 1,
-      title: "HTML",
-      description: "Learn HTML and build modern web structure.",
+
+      title: t.courses.html.title,
+      description: t.courses.html.description,
       students: 110,
-      duration: "5 Weeks",
+      duration: "5",
       level: "Beginner",
     },
     {
       id: 3,
-      title: "JavaScript",
-      description: "Learn JavaScript from basic to advanced concepts.",
+      title: t.courses.javascript.title,
+      description: t.courses.javascript.description,
       students: 180,
-      duration: "10 Weeks",
+      duration: "10",
       level: "Intermediate",
     },
     {
       id: 4,
-      title: "React JS",
-      description: "Learn React JS and build modern web applications.",
+      title: t.courses.react.title,
+      description: t.courses.react.description,
       students: 120,
-      duration: "8 Weeks",
+      duration: "8",
       level: "Beginner",
     },
   ];
@@ -46,9 +47,18 @@ const PopularCourses = () => {
             <p>{course.description}</p>
 
             <div>
-              <span>👨‍🎓 {course.students} Students</span>
-              <span>⏱ {course.duration}</span>
-              <span>📊 {course.level}</span>
+              <span>👨‍🎓 {course.students}</span>
+              <span>
+                {" "}
+                ⏱ {course.duration} {t.courses.weeks}
+              </span>
+              <span>
+                {" "}
+                📊{" "}
+                {course.level === "Beginner"
+                  ? t.courses.beginner
+                  : t.courses.intermediate}
+              </span>
             </div>
 
             <Link to={`/courses/${course.id}`}>

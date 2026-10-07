@@ -43,11 +43,11 @@ const ps = {
     button: "کورسونه وګورئ",
   },
   stats: {
-  students: "زده کوونکي",
-  courses: "کورسونه",
-  lessons: "درسونه",
-  success: "د بریالیتوب کچه",
-},
+    students: "زده کوونکي",
+    courses: "کورسونه",
+    lessons: "درسونه",
+    success: "د بریالیتوب کچه",
+  },
 
   footer: {
     description:
@@ -57,6 +57,47 @@ const ps = {
     popularCourses: "مشهور کورسونه",
     rights: "ټول حقوق خوندي دي.",
   },
+  // COURSES PAGE
+courses: {
+  title: "زموږ کورسونه",
+  description: "زموږ مشهور کورسونه وګورئ او نن خپله زده کړه پیل کړئ.",
+
+  students: "زده کوونکي",
+  weeks: "اونۍ",
+  beginner: "پیل کوونکی",
+  intermediate: "منځنۍ کچه",
+  viewCourse: "کورس وګورئ",
+
+  html: {
+    title: "HTML",
+    description: "HTML زده کړئ او د عصري ویب پاڼو جوړښت جوړ کړئ.",
+  },
+
+  css: {
+    title: "CSS",
+    description: "CSS زده کړئ او عصري ویب پاڼې جوړې کړئ.",
+  },
+
+  javascript: {
+    title: "JavaScript",
+    description: "JavaScript له بنسټیزو مفاهیمو څخه تر پرمختللو موضوعاتو زده کړئ.",
+  },
+
+  react: {
+    title: "React",
+    description: "React زده کړئ او عصري کارن انټرفېسونه جوړ کړئ.",
+  },
+
+  php: {
+    title: "PHP",
+    description: "PHP زده کړئ او Dynamic ویب اپلېکېشنونه جوړ کړئ.",
+  },
+
+  mysql: {
+    title: "MySQL",
+    description: "MySQL زده کړئ او ډیټابېسونه په مؤثره توګه مدیریت کړئ.",
+  },
+},
 };
 
 export default ps;
