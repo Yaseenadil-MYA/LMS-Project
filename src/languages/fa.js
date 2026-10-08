@@ -61,46 +61,97 @@ const fa = {
     rights: "تمام حقوق محفوظ است.",
   },
   // COURSES PAGE
-courses: {
-  title: "دوره‌های ما",
-  description: "دوره‌های محبوب ما را ببینید و یادگیری را امروز شروع کنید.",
+  courses: {
+    title: "دوره‌های ما",
+    description: "دوره‌های محبوب ما را ببینید و یادگیری را امروز شروع کنید.",
 
-  students: "دانشجویان",
-  weeks: "هفته",
-  beginner: "مبتدی",
-  intermediate: "متوسط",
-  viewCourse: "مشاهده دوره",
+    students: "دانشجویان",
+    weeks: "هفته",
+    beginner: "مبتدی",
+    intermediate: "متوسط",
+    viewCourse: "مشاهده دوره",
 
-  html: {
-    title: "HTML",
-    description: "HTML را یاد بگیرید و ساختار وب‌سایت‌های مدرن را بسازید.",
+    html: {
+      title: "HTML",
+      description: "HTML را یاد بگیرید و ساختار وب‌سایت‌های مدرن را بسازید.",
+      learn: [
+        "مبانی HTML",
+        "عناصر HTML",
+        "فرم‌های HTML",
+        "جدول‌های HTML",
+        "HTML معنایی",
+      ],
+    },
+
+    css: {
+      title: "CSS",
+      description: "CSS را یاد بگیرید و وب‌سایت‌های مدرن بسازید.",
+      learn: ["مبانی CSS", "سلکتورها", "Flexbox", "Grid", "طراحی واکنش‌گرا"],
+    },
+
+    javascript: {
+      title: "JavaScript",
+      description:
+        "JavaScript را از مفاهیم پایه تا موضوعات پیشرفته یاد بگیرید.",
+      learn: [
+        "مبانی JavaScript",
+        "متغیرها و انواع داده (Variables and Data Types)",
+        "توابع (Functions)",
+        "آرایه‌ها و اشیا (Arrays and Objects)",
+        "مدیریت DOM (DOM Manipulation)",
+      ],
+    },
+
+    react: {
+      title: "React",
+      description: "React را یاد بگیرید و رابط‌های کاربری مدرن بسازید.",
+      learn: [
+        "اجزای React (Components)",
+        "Props",
+        "State",
+        "Hooks",
+        "React Router",
+      ],
+    },
+
+    php: {
+      title: "PHP",
+      description: "PHP را یاد بگیرید و برنامه‌های وب پویا بسازید.",
+      learn: [
+        "مبانی PHP",
+        "متغیرها (Variables)",
+        "توابع (Functions)",
+        "فرم‌ها (Forms)",
+        "Sessions و Cookies",
+      ],
+    },
+
+    mysql: {
+      title: "MySQL",
+      description: "MySQL را یاد بگیرید و پایگاه‌های داده را مدیریت کنید.",
+      learn: [
+        "مبانی پایگاه داده",
+        "جدول‌ها (Tables)",
+        "پرس‌وجوهای SQL (Queries)",
+        "وارد کردن و به‌روزرسانی داده‌ها",
+        "روابط (Relationships)",
+      ],
+    },
   },
 
-  css: {
-    title: "CSS",
-    description: "CSS را یاد بگیرید و وب‌سایت‌های مدرن بسازید.",
+  // COURSE DETAILS PAGE
+  courseDetails: {
+    about: "درباره این دوره",
+    whatYouLearn: "چه چیزهایی یاد خواهید گرفت",
+    students: "دانشجویان",
+    duration: "مدت",
+    level: "سطح",
+    instructor: "مدرس",
+    lessons: "درس‌ها",
+    enroll: "ثبت‌نام کنید",
+    backToCourses: "بازگشت به دوره‌ها",
+    notFound: "دوره پیدا نشد",
   },
-
-  javascript: {
-    title: "JavaScript",
-    description: "JavaScript را از مفاهیم پایه تا موضوعات پیشرفته یاد بگیرید.",
-  },
-
-  react: {
-    title: "React",
-    description: "React را یاد بگیرید و رابط‌های کاربری مدرن بسازید.",
-  },
-
-  php: {
-    title: "PHP",
-    description: "PHP را یاد بگیرید و برنامه‌های وب پویا بسازید.",
-  },
-
-  mysql: {
-    title: "MySQL",
-    description: "MySQL را یاد بگیرید و پایگاه‌های داده را مدیریت کنید.",
-  },
-},
 };
 
 export default fa;

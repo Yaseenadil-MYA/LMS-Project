@@ -42,63 +42,113 @@ const en = {
       "Start your learning journey today and build new skills for your future.",
     button: "Explore Courses",
   },
-stats: {
-  students: "Students",
-  courses: "Courses",
-  lessons: "Lessons",
-  success: "Success Rate",
-},
-
-footer: {
-  description:
-    "Learn new skills, improve your knowledge, and build your future with our LMS.",
-  quickLinks: "Quick Links",
-  learning: "Learning",
-  popularCourses: "Popular Courses",
-  rights: "All rights reserved.",
-},
-
-// COURSES PAGE
-courses: {
-  title: "Our Courses",
-  description: "Explore our popular courses and start learning today.",
-
-  students: "Students",
-  weeks: "Weeks",
-  beginner: "Beginner",
-  intermediate: "Intermediate",
-  viewCourse: "View Course",
-
-  html: {
-    title: "HTML",
-    description: "Learn HTML and build modern web structure.",
+  stats: {
+    students: "Students",
+    courses: "Courses",
+    lessons: "Lessons",
+    success: "Success Rate",
   },
 
-  css: {
-    title: "CSS",
-    description: "Learn CSS and build modern websites.",
+  footer: {
+    description:
+      "Learn new skills, improve your knowledge, and build your future with our LMS.",
+    quickLinks: "Quick Links",
+    learning: "Learning",
+    popularCourses: "Popular Courses",
+    rights: "All rights reserved.",
   },
 
-  javascript: {
-    title: "JavaScript",
-    description: "Learn JavaScript from basic concepts to advanced topics.",
+  // COURSES PAGE
+  courses: {
+    title: "Our Courses",
+    description: "Explore our popular courses and start learning today.",
+
+    students: "Students",
+    weeks: "Weeks",
+    beginner: "Beginner",
+    intermediate: "Intermediate",
+    viewCourse: "View Course",
+
+    html: {
+      title: "HTML",
+      description: "Learn HTML and build modern web structure.",
+      learn: [
+        "HTML Basics",
+        "HTML Elements",
+        "HTML Forms",
+        "HTML Tables",
+        "Semantic HTML",
+      ],
+    },
+
+    css: {
+      title: "CSS",
+      description: "Learn CSS and build modern websites.",
+      learn: [
+        "CSS Basics",
+        "Selectors",
+        "Flexbox",
+        "Grid",
+        "Responsive Design",
+      ],
+    },
+
+    javascript: {
+      title: "JavaScript",
+      description: "Learn JavaScript from basic concepts to advanced topics.",
+      learn: [
+        "JavaScript Basics",
+        "Variables and Data Types",
+        "Functions",
+        "Arrays and Objects",
+        "DOM Manipulation",
+      ],
+    },
+
+    react: {
+      title: "React",
+      description: "Learn React and build modern user interfaces.",
+      learn: ["React Components", "Props", "State", "Hooks", "React Router"],
+    },
+
+    php: {
+      title: "PHP",
+      description: "Learn PHP and build dynamic web applications.",
+      learn: [
+        "PHP Basics",
+        "Variables",
+        "Functions",
+        "Forms",
+        "Sessions and Cookies",
+      ],
+    },
+
+    mysql: {
+      title: "MySQL",
+      description: "Learn MySQL and manage databases efficiently.",
+      learn: [
+        "Database Basics",
+        "Tables",
+        "SQL Queries",
+        "Insert and Update Data",
+        "Relationships",
+      ],
+    },
   },
 
-  react: {
-    title: "React",
-    description: "Learn React and build modern user interfaces.",
+  // course details page
+  courseDetails: {
+    about: "About This Course",
+    whatYouLearn: "What You Will Learn",
+    students: "Students",
+    duration: "Duration",
+    level: "Level",
+    instructor: "Instructor",
+    lessons: "Lessons",
+    enroll: "Enroll Now",
+    backToCourses: "Back to Courses",
+    notFound: "Course Not Found",
   },
-
-  php: {
-    title: "PHP",
-    description: "Learn PHP and build dynamic web applications.",
-  },
-
-  mysql: {
-    title: "MySQL",
-    description: "Learn MySQL and manage databases efficiently.",
-  },
-},
 };
 
 export default en;

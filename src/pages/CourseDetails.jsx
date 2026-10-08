@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
+
 import { Link, useParams } from "react-router-dom";
+
 import "./CourseDetails.css";
+
+import { LanguageContext } from "../context/LanguageContext";
 
 const CourseDetails = () => {
   const { id } = useParams();
-  //enroll button.
+
+  const { t } = useContext(LanguageContext);
+
+  // Enroll button
   const handleEnroll = () => {
     alert(`You have enrolled in ${course.title} course!`);
   };
@@ -12,6 +19,7 @@ const CourseDetails = () => {
   const courses = [
     {
       id: 1,
+      translationKey: "html",
       title: "HTML",
       description:
         "Learn HTML and build modern web structure from the beginning.",
@@ -32,6 +40,7 @@ const CourseDetails = () => {
 
     {
       id: 2,
+      translationKey: "css",
       title: "CSS",
       description:
         "Learn CSS and create beautiful, responsive and modern websites.",
@@ -52,6 +61,7 @@ const CourseDetails = () => {
 
     {
       id: 3,
+      translationKey: "javascript",
       title: "JavaScript",
       description:
         "Learn JavaScript from basic concepts to advanced programming topics.",
@@ -72,6 +82,7 @@ const CourseDetails = () => {
 
     {
       id: 4,
+      translationKey: "react",
       title: "React JS",
       description:
         "Learn React JS and build modern and interactive web applications.",
@@ -86,6 +97,7 @@ const CourseDetails = () => {
 
     {
       id: 5,
+      translationKey: "php",
       title: "PHP",
       description:
         "Learn PHP and build powerful backend applications and websites.",
@@ -106,6 +118,7 @@ const CourseDetails = () => {
 
     {
       id: 6,
+      translationKey: "mysql",
       title: "MySQL",
       description: "Learn MySQL and manage databases professionally.",
       students: 90,
@@ -129,54 +142,68 @@ const CourseDetails = () => {
   if (!course) {
     return (
       <div className="course-not-found">
-        <h2>Course Not Found</h2>
-        <Link to="/courses">Back to Courses</Link>
+        <h2>{t.courseDetails.notFound}</h2>
+
+        <Link to="/courses">{t.courseDetails.backToCourses}</Link>
       </div>
     );
   }
 
+  const courseTranslation = t.courses[course.translationKey];
+  console.log(courseTranslation);
+
   return (
     <section className="course-details">
       <div className="details-header">
-        <h1>{course.title}</h1>
+        <h1>{courseTranslation.title}</h1>
 
-        <p>{course.description}</p>
+        <p>{courseTranslation.description}</p>
       </div>
 
       <div className="details-container">
         <div className="details-main">
-          <h2>About This Course</h2>
+          <h2>{t.courseDetails.about}</h2>
 
-          <p>{course.description}</p>
+          <p>{courseTranslation.description}</p>
 
-          <h2>What You Will Learn</h2>
+          <h2>{t.courseDetails.whatYouLearn}</h2>
 
           <ul>
-            {course.learn.map((item, index) => (
+            {courseTranslation.learn?.map((item, index) => (
               <li key={index}>✅ {item}</li>
             ))}
           </ul>
         </div>
 
         <div className="details-card">
-          <h2>{course.title}</h2>
+          <h2>{courseTranslation.title}</h2>
 
-          <p>👨‍🎓 Students: {course.students}</p>
+          <p>
+            👨‍🎓 {t.courseDetails.students}: {course.students}
+          </p>
 
-          <p>⏱ Duration: {course.duration}</p>
+          <p>
+            ⏱ {t.courseDetails.duration}: {course.duration}
+          </p>
 
-          <p>📊 Level: {course.level}</p>
+          <p>
+            📊 {t.courseDetails.level}: {course.level}
+          </p>
 
-          <p>👨‍🏫 Instructor: {course.instructor}</p>
+          <p>
+            👨‍🏫 {t.courseDetails.instructor}: {course.instructor}
+          </p>
 
-          <p>📚 Lessons: {course.lessons}</p>
+          <p>
+            📚 {t.courseDetails.lessons}: {course.lessons}
+          </p>
 
           <h2>{course.price}</h2>
 
-          <button onClick={handleEnroll}>Enroll Now</button>
+          <button onClick={handleEnroll}>{t.courseDetails.enroll}</button>
 
           <Link to="/courses">
-            <button>Back to Courses</button>
+            <button>{t.courseDetails.backToCourses}</button>
           </Link>
         </div>
       </div>

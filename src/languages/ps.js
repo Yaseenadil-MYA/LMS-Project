@@ -58,46 +58,103 @@ const ps = {
     rights: "ټول حقوق خوندي دي.",
   },
   // COURSES PAGE
-courses: {
-  title: "زموږ کورسونه",
-  description: "زموږ مشهور کورسونه وګورئ او نن خپله زده کړه پیل کړئ.",
+  courses: {
+    title: "زموږ کورسونه",
+    description: "زموږ مشهور کورسونه وګورئ او نن خپله زده کړه پیل کړئ.",
 
-  students: "زده کوونکي",
-  weeks: "اونۍ",
-  beginner: "پیل کوونکی",
-  intermediate: "منځنۍ کچه",
-  viewCourse: "کورس وګورئ",
+    students: "زده کوونکي",
+    weeks: "اونۍ",
+    beginner: "پیل کوونکی",
+    intermediate: "منځنۍ کچه",
+    viewCourse: "کورس وګورئ",
 
-  html: {
-    title: "HTML",
-    description: "HTML زده کړئ او د عصري ویب پاڼو جوړښت جوړ کړئ.",
+    html: {
+      title: "HTML",
+      description: "HTML زده کړئ او د عصري ویب پاڼو جوړښت جوړ کړئ.",
+      learn: [
+        "د HTML بنسټونه",
+        "د HTML عناصر",
+        "د HTML فورمې",
+        "د HTML جدولونه",
+        "Semantic HTML",
+      ],
+    },
+
+    css: {
+      title: "CSS",
+      description: "CSS زده کړئ او عصري ویب پاڼې جوړې کړئ.",
+      learn: [
+        "د CSS بنسټونه",
+        "انتخابوونکي (Selectors)",
+        "Flexbox",
+        "Grid",
+        "ځواب ویونکی ډیزاین (Responsive Design)",
+      ],
+    },
+
+    javascript: {
+      title: "JavaScript",
+      description:
+        "JavaScript له بنسټیزو مفاهیمو څخه تر پرمختللو موضوعاتو زده کړئ.",
+      learn: [
+        "د JavaScript بنسټونه",
+        "متغیرونه او د معلوماتو ډولونه (Variables and Data Types)",
+        "دندې (Functions)",
+        "Arrays او Objects",
+        "د DOM مدیریت (DOM Manipulation)",
+      ],
+    },
+
+    react: {
+      title: "React",
+      description: "React زده کړئ او عصري کارن انټرفېسونه جوړ کړئ.",
+      learn: [
+        "د React اجزاوې (Components)",
+        "Props",
+        "State",
+        "Hooks",
+        "React Router",
+      ],
+    },
+
+    php: {
+      title: "PHP",
+      description: "PHP زده کړئ او Dynamic ویب اپلېکېشنونه جوړ کړئ.",
+      learn: [
+        "د PHP بنسټونه",
+        "متغیرونه (Variables)",
+        "دندې (Functions)",
+        "فورمې (Forms)",
+        "Sessions او Cookies",
+      ],
+    },
+
+    mysql: {
+      title: "MySQL",
+      description: "MySQL زده کړئ او ډیټابېسونه په مؤثره توګه مدیریت کړئ.",
+      learn: [
+        "د ډیټابېس بنسټونه",
+        "جدولونه (Tables)",
+        "SQL پوښتنې (Queries)",
+        "د معلوماتو داخلول او تازه کول",
+        "اړیکې (Relationships)",
+      ],
+    },
   },
 
-  css: {
-    title: "CSS",
-    description: "CSS زده کړئ او عصري ویب پاڼې جوړې کړئ.",
+  //course details page
+  courseDetails: {
+    about: "د دې کورس په اړه",
+    whatYouLearn: "تاسو به څه زده کړئ",
+    students: "زده کوونکي",
+    duration: "موده",
+    level: "کچه",
+    instructor: "ښوونکی",
+    lessons: "درسونه",
+    enroll: "نوم لیکنه وکړئ",
+    backToCourses: "کورسونو ته بېرته لاړ شئ",
+    notFound: "کورس پیدا نه شو",
   },
-
-  javascript: {
-    title: "JavaScript",
-    description: "JavaScript له بنسټیزو مفاهیمو څخه تر پرمختللو موضوعاتو زده کړئ.",
-  },
-
-  react: {
-    title: "React",
-    description: "React زده کړئ او عصري کارن انټرفېسونه جوړ کړئ.",
-  },
-
-  php: {
-    title: "PHP",
-    description: "PHP زده کړئ او Dynamic ویب اپلېکېشنونه جوړ کړئ.",
-  },
-
-  mysql: {
-    title: "MySQL",
-    description: "MySQL زده کړئ او ډیټابېسونه په مؤثره توګه مدیریت کړئ.",
-  },
-},
 };
 
 export default ps;
