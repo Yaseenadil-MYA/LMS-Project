@@ -149,6 +149,50 @@ const en = {
     backToCourses: "Back to Courses",
     notFound: "Course Not Found",
   },
+  // about page
+
+  about: {
+    title: "About Our LMS",
+    description:
+      "Learn new skills, improve your knowledge, and build your future with our online learning platform.",
+    whoWeAre: "Who We Are",
+    whoWeAreText1:
+      "Our Learning Management System is designed to provide students with an easy and modern way to learn online. Students can explore courses, learn new skills, and manage their learning journey from one platform.",
+    whoWeAreText2:
+      "Our goal is to make online education simple, accessible, and useful for everyone.",
+    whyChoose: "Why Choose Our LMS?",
+    qualityCourses: "Quality Courses",
+    experiencedInstructors: "Experienced Instructors",
+    learnOnline: "Learn Online",
+    responsiveDesign: "Responsive Design",
+    learnAtYourPace: "Learn at Your Own Pace",
+    students: "Students",
+    courses: "Courses",
+    instructors: "Instructors",
+    learning: "Learning",
+  },
+  //contact page
+
+  contact: {
+    title: "Contact Us",
+    description:
+      "Have a question or need help? Send us a message and we will get back to you.",
+    getInTouch: "Get In Touch",
+    infoText:
+      "We are here to help you with any questions about our courses and learning platform.",
+    email: "Email",
+    phone: "Phone",
+    address: "Address",
+    sendMessage: "Send Us a Message",
+    name: "Name",
+    namePlaceholder: "Enter your name",
+    emailPlaceholder: "Enter your email",
+    subject: "Subject",
+    subjectPlaceholder: "Enter subject",
+    message: "Message",
+    messagePlaceholder: "Write your message...",
+    sendButton: "Send Message",
+  },
 };
 
 export default en;
