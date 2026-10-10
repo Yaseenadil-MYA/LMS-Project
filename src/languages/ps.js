@@ -199,6 +199,25 @@ contact: {
   messagePlaceholder: "خپل پیغام ولیکئ...",
   sendButton: "پیغام ولېږئ",
 },
+// login page
+
+login: {
+  title: "ننوتل",
+  email: "برېښنالیک",
+  password: "پټ نوم",
+  button: "ننوتل",
+},
+// register page
+
+register: {
+  title: "نوم‌لیکنه",
+  name: "نوم",
+  email: "برېښنالیک",
+  password: "پټ نوم",
+  confirmPassword: "پټ نوم بیا ولیکئ",
+  button: "نوم‌لیکنه",
+},
+
 };
 
 export default ps;

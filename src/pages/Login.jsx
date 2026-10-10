@@ -1,26 +1,26 @@
-import React from 'react'
-import './Login.css'
+import React, { useContext } from "react";
+import "./Login.css";
+import { LanguageContext } from "../context/LanguageContext";
 
 const Login = () => {
+  const { t } = useContext(LanguageContext);
   return (
-    <div className='login'>
-        <h1>Login</h1>
-        <form>
-            <div>
-                <label>Email</label>
-                <input type="email" />
+    <div className="login">
+      <h1>{t.login.title}</h1>
+      <form>
+        <div>
+          <label>{t.login.email}</label>
+          <input type="email" />
+        </div>
+        <div>
+          <label>{t.login.password}</label>
+          <input type="password" />
+        </div>
 
-            </div>
-            <div>
-                <label>password</label>
-                <input type="password" />
-            </div>
-
-            <button type="submit">Login</button>
-        </form>
-
+        <button type="submit">{t.login.button}</button>
+      </form>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

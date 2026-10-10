@@ -193,6 +193,26 @@ const en = {
     messagePlaceholder: "Write your message...",
     sendButton: "Send Message",
   },
+  // login page
+  
+login: {
+  title: "Login",
+  email: "Email",
+  password: "Password",
+  button: "Login",
+},
+// register page
+
+register: {
+  title: "Register",
+  name: "Name",
+  email: "Email",
+  password: "Password",
+  confirmPassword: "Confirm Password",
+  button: "Register",
+},
+
+
 };
 
 export default en;

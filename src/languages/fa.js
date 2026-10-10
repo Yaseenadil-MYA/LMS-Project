@@ -196,6 +196,25 @@ contact: {
   messagePlaceholder: "پیام خود را بنویسید...",
   sendButton: "ارسال پیام",
 },
+// login page
+
+login: {
+  title: "ورود",
+  email: "ایمیل",
+  password: "رمز عبور",
+  button: "ورود",
+},
+// 
+
+register: {
+  title: "ثبت‌نام",
+  name: "نام",
+  email: "ایمیل",
+  password: "رمز عبور",
+  confirmPassword: "تأیید رمز عبور",
+  button: "ثبت‌نام",
+},
+
 };
 
 export default fa;
