@@ -175,46 +175,72 @@ const fa = {
     learning: "یادگیری",
   },
   // CONTACT PAGE
-  
-contact: {
-  title: "تماس با ما",
-  description:
-    "پرسشی دارید یا به کمک نیاز دارید؟ برای ما پیام بفرستید تا با شما تماس بگیریم.",
-  getInTouch: "با ما در تماس شوید",
-  infoText:
-    "ما آماده هستیم تا به پرسش‌های شما درباره دوره‌ها و پلتفرم آموزشی خود پاسخ دهیم.",
-  email: "ایمیل",
-  phone: "شماره تماس",
-  address: "آدرس",
-  sendMessage: "برای ما پیام بفرستید",
-  name: "نام",
-  namePlaceholder: "نام خود را وارد کنید",
-  emailPlaceholder: "ایمیل خود را وارد کنید",
-  subject: "موضوع",
-  subjectPlaceholder: "موضوع را وارد کنید",
-  message: "پیام",
-  messagePlaceholder: "پیام خود را بنویسید...",
-  sendButton: "ارسال پیام",
-},
-// login page
 
-login: {
-  title: "ورود",
-  email: "ایمیل",
-  password: "رمز عبور",
-  button: "ورود",
-},
-// 
+  contact: {
+    title: "تماس با ما",
+    description:
+      "پرسشی دارید یا به کمک نیاز دارید؟ برای ما پیام بفرستید تا با شما تماس بگیریم.",
+    getInTouch: "با ما در تماس شوید",
+    infoText:
+      "ما آماده هستیم تا به پرسش‌های شما درباره دوره‌ها و پلتفرم آموزشی خود پاسخ دهیم.",
+    email: "ایمیل",
+    phone: "شماره تماس",
+    address: "آدرس",
+    sendMessage: "برای ما پیام بفرستید",
+    name: "نام",
+    namePlaceholder: "نام خود را وارد کنید",
+    emailPlaceholder: "ایمیل خود را وارد کنید",
+    subject: "موضوع",
+    subjectPlaceholder: "موضوع را وارد کنید",
+    message: "پیام",
+    messagePlaceholder: "پیام خود را بنویسید...",
+    sendButton: "ارسال پیام",
+  },
+  // login page
 
-register: {
-  title: "ثبت‌نام",
-  name: "نام",
-  email: "ایمیل",
-  password: "رمز عبور",
-  confirmPassword: "تأیید رمز عبور",
-  button: "ثبت‌نام",
-},
+  login: {
+    title: "ورود",
+    email: "ایمیل",
+    password: "رمز عبور",
+    button: "ورود",
+  },
+  //
 
+  register: {
+    title: "ثبت‌نام",
+    name: "نام",
+    email: "ایمیل",
+    password: "رمز عبور",
+    confirmPassword: "تأیید رمز عبور",
+    button: "ثبت‌نام",
+  },
+  // student dashbord
+
+  dashboard: {
+    title: "داشبورد دانشجو",
+    welcome: "خوش آمدید! به یادگیری ادامه دهید و پیشرفت کنید.",
+    dashboard: "داشبورد",
+    courses: "دوره‌ها",
+    myCourses: "دوره‌های من",
+    profile: "پروفایل",
+    logout: "خروج",
+    online: "آنلاین",
+    totalCourses: "مجموع دوره‌ها",
+    enrolledCourses: "دوره‌های ثبت‌نام‌شده",
+    completedCourses: "دوره‌های تکمیل‌شده",
+    learningProgress: "پیشرفت یادگیری",
+    continueLearning: "ادامه یادگیری",
+
+    htmlDescription: "HTML را یاد بگیرید و ساختار مدرن صفحات وب را بسازید.",
+    cssDescription: "CSS را یاد بگیرید و وب‌سایت‌های مدرن طراحی کنید.",
+    jsDescription: "جاوااسکریپت را از مفاهیم پایه تا پیشرفته یاد بگیرید.",
+    reactDescription: "React را یاد بگیرید و برنامه‌های مدرن وب بسازید.",
+    phpDescription: "PHP را یاد بگیرید و وب‌سایت‌های پویا ایجاد کنید.",
+    mysqlDescription:
+      "MySQL را یاد بگیرید و پایگاه‌های داده را به‌صورت حرفه‌ای مدیریت کنید.",
+
+    footer: "© 2026 LMS. تمام حقوق محفوظ است.",
+  },
 };
 
 export default fa;

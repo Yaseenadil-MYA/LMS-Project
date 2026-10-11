@@ -178,46 +178,71 @@ const ps = {
     learning: "زده‌کړه",
   },
   //contact page
-  
-contact: {
-  title: "اړیکه ونیسئ",
-  description:
-    "پوښتنه لرئ یا مرستې ته اړتیا لرئ؟ موږ ته پیغام راولېږئ، بېرته به درسره اړیکه ونیسو.",
-  getInTouch: "زموږ سره اړیکه",
-  infoText:
-    "موږ چمتو یو چې زموږ د کورسونو او د زده‌کړو د سیسټم په اړه ستاسو پوښتنو ته ځواب ووایو.",
-  email: "برېښنالیک",
-  phone: "د ټیلیفون شمېره",
-  address: "پته",
-  sendMessage: "موږ ته پیغام راولېږئ",
-  name: "نوم",
-  namePlaceholder: "خپل نوم ولیکئ",
-  emailPlaceholder: "خپل برېښنالیک ولیکئ",
-  subject: "موضوع",
-  subjectPlaceholder: "موضوع ولیکئ",
-  message: "پیغام",
-  messagePlaceholder: "خپل پیغام ولیکئ...",
-  sendButton: "پیغام ولېږئ",
-},
-// login page
 
-login: {
-  title: "ننوتل",
-  email: "برېښنالیک",
-  password: "پټ نوم",
-  button: "ننوتل",
-},
-// register page
+  contact: {
+    title: "اړیکه ونیسئ",
+    description:
+      "پوښتنه لرئ یا مرستې ته اړتیا لرئ؟ موږ ته پیغام راولېږئ، بېرته به درسره اړیکه ونیسو.",
+    getInTouch: "زموږ سره اړیکه",
+    infoText:
+      "موږ چمتو یو چې زموږ د کورسونو او د زده‌کړو د سیسټم په اړه ستاسو پوښتنو ته ځواب ووایو.",
+    email: "برېښنالیک",
+    phone: "د ټیلیفون شمېره",
+    address: "پته",
+    sendMessage: "موږ ته پیغام راولېږئ",
+    name: "نوم",
+    namePlaceholder: "خپل نوم ولیکئ",
+    emailPlaceholder: "خپل برېښنالیک ولیکئ",
+    subject: "موضوع",
+    subjectPlaceholder: "موضوع ولیکئ",
+    message: "پیغام",
+    messagePlaceholder: "خپل پیغام ولیکئ...",
+    sendButton: "پیغام ولېږئ",
+  },
+  // login page
 
-register: {
-  title: "نوم‌لیکنه",
-  name: "نوم",
-  email: "برېښنالیک",
-  password: "پټ نوم",
-  confirmPassword: "پټ نوم بیا ولیکئ",
-  button: "نوم‌لیکنه",
-},
+  login: {
+    title: "ننوتل",
+    email: "برېښنالیک",
+    password: "پټ نوم",
+    button: "ننوتل",
+  },
+  // register page
 
+  register: {
+    title: "نوم‌لیکنه",
+    name: "نوم",
+    email: "برېښنالیک",
+    password: "پټ نوم",
+    confirmPassword: "پټ نوم بیا ولیکئ",
+    button: "نوم‌لیکنه",
+  },
+  // student dashbord
+
+  dashboard: {
+    title: "د زده‌کوونکي ډشبورډ",
+    welcome: "بېرته ښه راغلاست! زده‌کړې ته دوام ورکړئ او پرمختګ وکړئ.",
+    dashboard: "ډشبورډ",
+    courses: "کورسونه",
+    myCourses: "زما کورسونه",
+    profile: "پروفایل",
+    logout: "وتل",
+    online: "آنلاین",
+    totalCourses: "ټول کورسونه",
+    enrolledCourses: "ثبت شوي کورسونه",
+    completedCourses: "بشپړ شوي کورسونه",
+    learningProgress: "د زده‌کړې پرمختګ",
+    continueLearning: "زده‌کړې ته دوام ورکړئ",
+
+    htmlDescription: "HTML زده کړئ او د وېبپاڼو جوړښت جوړ کړئ.",
+    cssDescription: "CSS زده کړئ او عصري وېبپاڼې ډیزاین کړئ.",
+    jsDescription: "جاواسکرېپټ له بنسټیزو تر پرمختللو مفاهیمو زده کړئ.",
+    reactDescription: "React زده کړئ او عصري وېب اپلېکېشنونه جوړ کړئ.",
+    phpDescription: "PHP زده کړئ او متحرکې وېبپاڼې جوړې کړئ.",
+    mysqlDescription: "MySQL زده کړئ او ډیټابېسونه په مسلکي ډول اداره کړئ.",
+
+    footer: "© 2026 LMS. ټول حقونه خوندي دي.",
+  },
 };
 
 export default ps;

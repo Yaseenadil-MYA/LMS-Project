@@ -194,25 +194,49 @@ const en = {
     sendButton: "Send Message",
   },
   // login page
-  
-login: {
-  title: "Login",
-  email: "Email",
-  password: "Password",
-  button: "Login",
-},
-// register page
 
-register: {
-  title: "Register",
-  name: "Name",
-  email: "Email",
-  password: "Password",
-  confirmPassword: "Confirm Password",
-  button: "Register",
-},
+  login: {
+    title: "Login",
+    email: "Email",
+    password: "Password",
+    button: "Login",
+  },
+  // register page
 
+  register: {
+    title: "Register",
+    name: "Name",
+    email: "Email",
+    password: "Password",
+    confirmPassword: "Confirm Password",
+    button: "Register",
+  },
+  // student dashbord
 
+  dashboard: {
+    title: "Student Dashboard",
+    welcome: "Welcome back! Keep learning and growing.",
+    dashboard: "Dashboard",
+    courses: "Courses",
+    myCourses: "My Courses",
+    profile: "Profile",
+    logout: "Logout",
+    online: "Online",
+    totalCourses: "Total Courses",
+    enrolledCourses: "Enrolled Courses",
+    completedCourses: "Completed Courses",
+    learningProgress: "Learning Progress",
+    continueLearning: "Continue Learning",
+
+    htmlDescription: "Learn HTML and build modern web structure.",
+    cssDescription: "Learn CSS and build modern websites.",
+    jsDescription: "Learn JavaScript from basic to advanced concepts.",
+    reactDescription: "Learn React.js and build modern web applications.",
+    phpDescription: "Learn PHP and build dynamic websites.",
+    mysqlDescription: "Learn MySQL and manage databases professionally.",
+
+    footer: "© 2026 LMS. All rights reserved.",
+  },
 };
 
 export default en;

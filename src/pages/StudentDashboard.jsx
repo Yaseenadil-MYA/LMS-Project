@@ -1,43 +1,45 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./StudentDashboard.css";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../context/LanguageContext";
 
 const StudentDashboard = () => {
+  const { t } = useContext(LanguageContext);
   const courses = [
     {
       id: 1,
       title: "HTML",
-      description: "Learn HTML and build modern web structure.",
+      description: t.dashboard.htmlDescription,
       progress: 70,
     },
     {
       id: 2,
       title: "CSS",
-      description: "Learn CSS and build modern websites.",
+      description: t.dashboard.cssDescription,
       progress: 50,
     },
     {
       id: 3,
       title: "javascript",
-      description: "learn javascript from basic to advance cencept.",
+      description: t.dashboard.jsDescription,
       progress: 60,
     },
     {
       id: 4,
       title: "React js",
-      description: "learn react js and build modern web Application.",
+      description: t.dashboard.reactDescription,
       progress: 20,
     },
     {
       id: 5,
       title: "PHP",
-      description: "Learn  and build modern websites.",
+      description: t.dashboard.phpDescription,
       progress: 70,
     },
     {
       id: 6,
       title: "mySQL",
-      description: "Learn MySQL and manage databases professionally.",
+      description: t.dashboard.mysqlDescription,
       progress: 30,
     },
   ];
@@ -50,12 +52,12 @@ const StudentDashboard = () => {
 
         <nav>
           <a className="active" href="/studentdashboard">
-            Dashboard
+            {t.dashboard.dashboard}
           </a>
-          <a href="/courses">Courses</a>
-          <a href="/my-courses">My Courses</a>
-          <a href="/profile">Profile</a>
-          <a href="/login">Logout</a>
+          <a href="/courses">{t.dashboard.courses}</a>
+          <a href="/my-courses">{t.dashboard.myCourses}</a>
+          <a href="/profile">{t.dashboard.profile}</a>
+          <a href="/login">{t.dashboard.logout}</a>
         </nav>
       </aside>
 
@@ -64,23 +66,15 @@ const StudentDashboard = () => {
         {/* Header */}
         <header className="dashboard-header">
           <div>
-            <h1>Student Dashboard</h1>
-            <p>Welcome back! Keep learning and growing.</p>
+            <h1>{t.dashboard.title}</h1>
+            <p>{t.dashboard.welcome}</p>
           </div>
 
-          {/* <div className="student-info">
-            <span>👨‍🎓</span>
-
-            <div>
-              <strong>Student</strong>
-              <small>Online</small>
-            </div>
-          </div> */}
           <div className="student-info">
             <div className="student-avatar">Y</div>
             <div>
               <strong>Yasin</strong>
-              <small>Online</small>
+              <small>{t.dashboard.online}</small>
             </div>
           </div>
         </header>
@@ -92,7 +86,7 @@ const StudentDashboard = () => {
 
             <div>
               <h3>6</h3>
-              <p>Total Courses</p>
+              <p>{t.dashboard.totalCourses}</p>
             </div>
           </div>
 
@@ -101,7 +95,7 @@ const StudentDashboard = () => {
 
             <div>
               <h3>3</h3>
-              <p>Enrolled Courses</p>
+              <p>{t.dashboard.enrolledCourses}</p>
             </div>
           </div>
 
@@ -110,7 +104,7 @@ const StudentDashboard = () => {
 
             <div>
               <h3>2</h3>
-              <p>Completed Courses</p>
+              <p>{t.dashboard.completedCourses}</p>
             </div>
           </div>
 
@@ -119,14 +113,14 @@ const StudentDashboard = () => {
 
             <div>
               <h3>65%</h3>
-              <p>Learning Progress</p>
+              <p>{t.dashboard.learningProgress}</p>
             </div>
           </div>
         </div>
 
         {/* My Courses */}
         <div className="my-courses">
-          <h2>My Courses</h2>
+          <h2>{t.dashboard.myCourses}</h2>
 
           <div className="courses-container">
             {courses.map((course) => (
@@ -149,14 +143,14 @@ const StudentDashboard = () => {
                 {/* Button */}
                 {/* <button className="continue-btn">Continue Learning</button> */}
                 <Link to={`/lessons/${course.id}`} className="continue-btn">
-                  Continue Learning
+                  {t.dashboard.continueLearning}
                 </Link>
               </div>
             ))}
           </div>
         </div>
         <footer className="dashboard-footer">
-          <p>© 2026 LMS. All rights reserved.</p>
+          <p>{t.dashboard.footer}</p>
         </footer>
       </main>
     </div>
