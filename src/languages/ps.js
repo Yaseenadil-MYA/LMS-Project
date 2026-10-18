@@ -243,6 +243,26 @@ const ps = {
 
     footer: "© 2026 LMS. ټول حقونه خوندي دي.",
   },
+  // profile page
+  profile: {
+  title: "زما پروفایل",
+  student: "زده کوونکی",
+  email: "برېښنالیک",
+  phone: "د ټیلیفون شمېره",
+  courses: "کورسونه",
+  enrolledCourses: "په ۳ کورسونو کې شامل",
+  editProfile: "پروفایل سمول",
+  name: "نوم",
+  saveChanges: "بدلونونه خوندي کول",
+  cancel: "لغوه کول"
+},
+// lessons page
+lessons: {
+  title: "د کورس درسونه",
+  description: "ګام په ګام زده کړه وکړئ او خپل مهارتونه پیاوړي کړئ.",
+  lesson: "درس",
+  startLesson: "درس پیل کړئ"
+},
 };
 
 export default ps;

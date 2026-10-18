@@ -241,6 +241,26 @@ const fa = {
 
     footer: "© 2026 LMS. تمام حقوق محفوظ است.",
   },
+  // profile page
+  profile: {
+  title: "پروفایل من",
+  student: "دانشجو",
+  email: "ایمیل",
+  phone: "شماره تلفن",
+  courses: "دوره‌ها",
+  enrolledCourses: "شامل در ۳ دوره",
+  editProfile: "ویرایش پروفایل",
+  name: "نام",
+  saveChanges: "ذخیره تغییرات",
+  cancel: "لغو"
+},
+// lessons page
+lessons: {
+  title: "درس‌های دوره",
+  description: "گام‌به‌گام یاد بگیرید و مهارت‌های خود را تقویت کنید.",
+  lesson: "درس",
+  startLesson: "شروع درس"
+},
 };
 
 export default fa;

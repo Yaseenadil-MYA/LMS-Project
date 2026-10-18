@@ -237,6 +237,27 @@ const en = {
 
     footer: "© 2026 LMS. All rights reserved.",
   },
+
+  // profile page
+  profile: {
+  title: "My Profile",
+  student: "Student",
+  email: "Email",
+  phone: "Phone",
+  courses: "Courses",
+  enrolledCourses: "3 Enrolled Courses",
+  editProfile: "Edit Profile",
+  name: "Name",
+  saveChanges: "Save Changes",
+  cancel: "Cancel"
+},
+// lessons page
+lessons: {
+  title: "Course Lessons",
+  description: "Learn step by step and improve your skills.",
+  lesson: "Lesson",
+  startLesson: "Start Lesson"
+},
 };
 
 export default en;

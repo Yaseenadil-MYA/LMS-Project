@@ -1,8 +1,10 @@
 
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import "./Profile.css";
+import { LanguageContext } from "../context/LanguageContext";
 
 const Profile = () => {
+    const { t } = useContext(LanguageContext);
 
   // Profile information
   const [name, setName] = useState("Yasin adil");
@@ -48,7 +50,7 @@ const Profile = () => {
         <h1>{name}</h1>
 
         <p className="profile-role">
-          Student
+          {t.profile.student}
         </p>
 
         {!isEditing ? (
@@ -58,18 +60,18 @@ const Profile = () => {
             <div className="profile-info">
 
               <div className="info-item">
-                <strong>Email</strong>
+                <strong>{t.profile.email}</strong>
                 <span>{email}</span>
               </div>
 
               <div className="info-item">
-                <strong>Phone</strong>
+                <strong>{t.profile.phone}</strong>
                 <span>{phone}</span>
               </div>
 
               <div className="info-item">
-                <strong>Courses</strong>
-                <span>3 Enrolled Courses</span>
+                <strong>{t.profile.courses}</strong>
+                <span>{t.profile.enrolledCourses}</span>
               </div>
 
             </div>
@@ -79,7 +81,7 @@ const Profile = () => {
               className="edit-profile-btn"
               onClick={() => setIsEditing(true)}
             >
-              Edit Profile
+             {t.profile.editProfile}
             </button>
           </>
 
@@ -88,7 +90,7 @@ const Profile = () => {
           /* Edit Profile Form */
           <div className="profile-form">
 
-            <label>Name</label>
+            <label>{t.profile.name}</label>
 
             <input
               type="text"
@@ -96,7 +98,7 @@ const Profile = () => {
               onChange={(e) => setEditName(e.target.value)}
             />
 
-            <label>Email</label>
+            <label>{t.profile.email}</label>
 
             <input
               type="email"
@@ -104,7 +106,7 @@ const Profile = () => {
               onChange={(e) => setEditEmail(e.target.value)}
             />
 
-            <label>Phone</label>
+            <label>{t.profile.phone}</label>
 
             <input
               type="text"
@@ -119,14 +121,14 @@ const Profile = () => {
                 className="save-profile-btn"
                 onClick={handleSave}
               >
-                Save Changes
+                {t.profile.saveChanges}
               </button>
 
               <button
                 className="cancel-profile-btn"
                 onClick={handleCancel}
               >
-                Cancel
+                {t.profile.cancel}
               </button>
 
             </div>
