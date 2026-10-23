@@ -1,10 +1,9 @@
-
 import React, { useState, useContext } from "react";
 import "./Profile.css";
 import { LanguageContext } from "../context/LanguageContext";
 
 const Profile = () => {
-    const { t } = useContext(LanguageContext);
+  const { t } = useContext(LanguageContext);
 
   // Profile information
   const [name, setName] = useState("Yasin adil");
@@ -39,26 +38,18 @@ const Profile = () => {
 
   return (
     <div className="profile-page">
-
       <div className="profile-card">
-
         {/* Profile Avatar */}
-        <div className="profile-avatar">
-          {name.charAt(0).toUpperCase()}
-        </div>
+        <div className="profile-avatar">{name.charAt(0).toUpperCase()}</div>
 
         <h1>{name}</h1>
 
-        <p className="profile-role">
-          {t.profile.student}
-        </p>
+        <p className="profile-role">{t.profile.student}</p>
 
         {!isEditing ? (
-
           <>
             {/* Profile Information */}
             <div className="profile-info">
-
               <div className="info-item">
                 <strong>{t.profile.email}</strong>
                 <span>{email}</span>
@@ -73,7 +64,6 @@ const Profile = () => {
                 <strong>{t.profile.courses}</strong>
                 <span>{t.profile.enrolledCourses}</span>
               </div>
-
             </div>
 
             {/* Edit Button */}
@@ -81,15 +71,12 @@ const Profile = () => {
               className="edit-profile-btn"
               onClick={() => setIsEditing(true)}
             >
-             {t.profile.editProfile}
+              {t.profile.editProfile}
             </button>
           </>
-
         ) : (
-
           /* Edit Profile Form */
           <div className="profile-form">
-
             <label>{t.profile.name}</label>
 
             <input
@@ -116,29 +103,17 @@ const Profile = () => {
 
             {/* Buttons */}
             <div className="profile-buttons">
-
-              <button
-                className="save-profile-btn"
-                onClick={handleSave}
-              >
+              <button className="save-profile-btn" onClick={handleSave}>
                 {t.profile.saveChanges}
               </button>
 
-              <button
-                className="cancel-profile-btn"
-                onClick={handleCancel}
-              >
+              <button className="cancel-profile-btn" onClick={handleCancel}>
                 {t.profile.cancel}
               </button>
-
             </div>
-
           </div>
-
         )}
-
       </div>
-
     </div>
   );
 };

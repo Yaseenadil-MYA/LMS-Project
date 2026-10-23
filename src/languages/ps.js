@@ -245,24 +245,46 @@ const ps = {
   },
   // profile page
   profile: {
-  title: "زما پروفایل",
-  student: "زده کوونکی",
-  email: "برېښنالیک",
-  phone: "د ټیلیفون شمېره",
-  courses: "کورسونه",
-  enrolledCourses: "په ۳ کورسونو کې شامل",
-  editProfile: "پروفایل سمول",
-  name: "نوم",
-  saveChanges: "بدلونونه خوندي کول",
-  cancel: "لغوه کول"
-},
-// lessons page
-lessons: {
-  title: "د کورس درسونه",
-  description: "ګام په ګام زده کړه وکړئ او خپل مهارتونه پیاوړي کړئ.",
-  lesson: "درس",
-  startLesson: "درس پیل کړئ"
-},
+    title: "زما پروفایل",
+    student: "زده کوونکی",
+    email: "برېښنالیک",
+    phone: "د ټیلیفون شمېره",
+    courses: "کورسونه",
+    enrolledCourses: "په ۳ کورسونو کې شامل",
+    editProfile: "پروفایل سمول",
+    name: "نوم",
+    saveChanges: "بدلونونه خوندي کول",
+    cancel: "لغوه کول",
+  },
+  // lessons page
+  lessons: {
+    title: "د کورس درسونه",
+    description: "ګام په ګام زده کړه وکړئ او خپل مهارتونه پیاوړي کړئ.",
+    lesson: "درس",
+    startLesson: "درس پیل کړئ",
+  },
+  // lessonsDetails page
+  lessonDetails: {
+    lesson: "درس",
+    of: "له",
+    lessonNotFound: "درس پیدا نه شو",
+    markComplete: "درس بشپړ شوی وټاکئ",
+    completed: "بشپړ شو",
+    previousLesson: "مخکینی درس",
+    nextLesson: "راتلونکی درس",
+  },
+  // my course page
+  myCourses: {
+    title: "زما کورسونه",
+    description: "دلته خپل ثبت شوي کورسونه لیدلی شئ.",
+    duration: "موده",
+    level: "کچه",
+    beginner: "ابتدایي",
+    intermediate: "منځنۍ",
+    weeks: "اونۍ",
+    complete: "بشپړ",
+    continueLearning: "زده کړې ته دوام ورکړئ",
+  },
 };
 
 export default ps;

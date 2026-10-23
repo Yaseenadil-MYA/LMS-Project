@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import { LanguageContext } from "../context/LanguageContext";
 import "./Mycourses.css";
 import { Link } from "react-router-dom";
 
 const Mycourses = () => {
+  const { t } = useContext(LanguageContext);
   const courses = [
     {
       id: 1,
@@ -50,16 +52,25 @@ const Mycourses = () => {
   ];
   return (
     <div className="my-courses-page">
-      <h1>My Courses</h1>
-      <p>Here you can see your enrolled courses.</p>
+      <h1>{t.myCourses.title}</h1>
+      <p>{t.myCourses.description}</p>
 
       <div className="my-courses-container">
         {courses.map((course) => (
           <div className="my-course-card" key={course.id}>
             <h2>{course.title}</h2>
 
-            <p>⏱ Duration:{course.duration}</p>
-            <p>📊 Level: {course.level}</p>
+            <p>
+              ⏱ {t.myCourses.duration}: {course.duration.split(" ")[0]}{" "}
+              {t.myCourses.weeks}
+            </p>
+
+            <p>
+              📊 {t.myCourses.level}:{" "}
+              {course.level === "Beginner"
+                ? t.myCourses.beginner
+                : t.myCourses.intermediate}
+            </p>
             <div className="course-progress">
               <div className="progress-bar">
                 <div
@@ -68,10 +79,12 @@ const Mycourses = () => {
                 ></div>
               </div>
 
-              <span>{course.progress}% Complete</span>
+              <span>
+                {course.progress}% {t.myCourses.complete}
+              </span>
             </div>
             <Link to={`/lessons/${course.id}`} className="continue-btn">
-              Continue Learning
+              {t.myCourses.continueLearning}
             </Link>
           </div>
         ))}

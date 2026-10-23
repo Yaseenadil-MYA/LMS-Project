@@ -243,24 +243,46 @@ const fa = {
   },
   // profile page
   profile: {
-  title: "پروفایل من",
-  student: "دانشجو",
-  email: "ایمیل",
-  phone: "شماره تلفن",
-  courses: "دوره‌ها",
-  enrolledCourses: "شامل در ۳ دوره",
-  editProfile: "ویرایش پروفایل",
-  name: "نام",
-  saveChanges: "ذخیره تغییرات",
-  cancel: "لغو"
-},
-// lessons page
-lessons: {
-  title: "درس‌های دوره",
-  description: "گام‌به‌گام یاد بگیرید و مهارت‌های خود را تقویت کنید.",
-  lesson: "درس",
-  startLesson: "شروع درس"
-},
+    title: "پروفایل من",
+    student: "دانشجو",
+    email: "ایمیل",
+    phone: "شماره تلفن",
+    courses: "دوره‌ها",
+    enrolledCourses: "شامل در ۳ دوره",
+    editProfile: "ویرایش پروفایل",
+    name: "نام",
+    saveChanges: "ذخیره تغییرات",
+    cancel: "لغو",
+  },
+  // lessons page
+  lessons: {
+    title: "درس‌های دوره",
+    description: "گام‌به‌گام یاد بگیرید و مهارت‌های خود را تقویت کنید.",
+    lesson: "درس",
+    startLesson: "شروع درس",
+  },
+  // lessonDetils page
+  lessonDetails: {
+    lesson: "درس",
+    of: "از",
+    lessonNotFound: "درس پیدا نشد",
+    markComplete: "علامت‌گذاری به‌عنوان تکمیل‌شده",
+    completed: "تکمیل شد",
+    previousLesson: "درس قبلی",
+    nextLesson: "درس بعدی",
+  },
+  // my courses page
+  myCourses: {
+    title: "دوره‌های من",
+    description: "در اینجا می‌توانید دوره‌های ثبت‌نام‌شده خود را ببینید.",
+    duration: "مدت",
+    level: "سطح",
+    beginner: "مبتدی",
+    intermediate: "متوسط",
+    weeks: "هفته",
+    complete: "تکمیل",
+    continueLearning: "ادامه یادگیری",
+  },
 };
 
 export default fa;
