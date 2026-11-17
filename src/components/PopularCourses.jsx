@@ -9,6 +9,7 @@ const PopularCourses = () => {
   const courses = [
     {
       id: 1,
+       icon: "🌐",
 
       title: t.courses.html.title,
       description: t.courses.html.description,
@@ -18,6 +19,7 @@ const PopularCourses = () => {
     },
     {
       id: 3,
+      icon:"⚡",
       title: t.courses.javascript.title,
       description: t.courses.javascript.description,
       students: 180,
@@ -26,6 +28,7 @@ const PopularCourses = () => {
     },
     {
       id: 4,
+       icon: "⚛️",
       title: t.courses.react.title,
       description: t.courses.react.description,
       students: 120,
@@ -42,6 +45,9 @@ const PopularCourses = () => {
       <div className="popular-container">
         {courses.map((course) => (
           <div className="popular-card" key={course.id}>
+            <div className="course-icon">
+  {course.icon}
+</div>
             <h3>{course.title}</h3>
 
             <p>{course.description}</p>
@@ -76,3 +82,6 @@ const PopularCourses = () => {
 };
 
 export default PopularCourses;
+
+
+ 

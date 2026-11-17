@@ -43,6 +43,22 @@ const StudentDashboard = () => {
       progress: 30,
     },
   ];
+  // Calculate dashboard statistics
+
+  const totalCourses = courses.length;
+
+  const enrolledCourses = courses.filter(
+    (course) => course.progress > 0,
+  ).length;
+
+  const completedCourses = courses.filter(
+    (course) => course.progress === 100,
+  ).length;
+
+  const averageProgress = Math.round(
+    courses.reduce((total, course) => total + course.progress, 0) /
+      totalCourses,
+  );
 
   return (
     <div className="dashboard">
@@ -85,7 +101,7 @@ const StudentDashboard = () => {
             <div className="stat-icon">📚</div>
 
             <div>
-              <h3>6</h3>
+              <h3>{totalCourses}</h3>
               <p>{t.dashboard.totalCourses}</p>
             </div>
           </div>
@@ -94,7 +110,7 @@ const StudentDashboard = () => {
             <div className="stat-icon">🎓</div>
 
             <div>
-              <h3>3</h3>
+              <h3>{enrolledCourses}</h3>
               <p>{t.dashboard.enrolledCourses}</p>
             </div>
           </div>
@@ -103,7 +119,7 @@ const StudentDashboard = () => {
             <div className="stat-icon">✅</div>
 
             <div>
-              <h3>2</h3>
+              <h3>{completedCourses}</h3>
               <p>{t.dashboard.completedCourses}</p>
             </div>
           </div>
@@ -112,9 +128,23 @@ const StudentDashboard = () => {
             <div className="stat-icon">📈</div>
 
             <div>
-              <h3>65%</h3>
+              <h3>{averageProgress}%</h3>
               <p>{t.dashboard.learningProgress}</p>
             </div>
+          </div>
+        </div>
+        {/* Overall Progress */}
+        <div className="overall-progress">
+          <div className="overall-progress-info">
+            <h3>{t.dashboard.learningProgress}</h3>
+            <span>{averageProgress}%</span>
+          </div>
+
+          <div className="progress-bar">
+            <div
+              className="progress-fill"
+              style={{ width: `${averageProgress}%` }}
+            ></div>
           </div>
         </div>
 
