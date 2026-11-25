@@ -238,6 +238,17 @@ const fa = {
     phpDescription: "PHP را یاد بگیرید و وب‌سایت‌های پویا ایجاد کنید.",
     mysqlDescription:
       "MySQL را یاد بگیرید و پایگاه‌های داده را به‌صورت حرفه‌ای مدیریت کنید.",
+    // recent activity page
+    recentActivity: "فعالیت‌های اخیر",
+    startedLearning: "یادگیری React js را آغاز کرد",
+    completedLesson: "درس مبانی HTML را تکمیل کرد",
+    enrolledNewCourse: "در دوره PHP ثبت‌نام کرد",
+    today: "امروز",
+    yesterday: "دیروز",
+    twoDaysAgo: "دو روز پیش",
+    continueReact: "یادگیری React را ادامه دهید",
+    htmlUpdated: "پیشرفت دوره HTML به‌روزرسانی شد",
+    newCourseStarted: "یادگیری یک دوره جدید آغاز شد",
 
     footer: "© 2026 LMS. تمام حقوق محفوظ است.",
   },
@@ -253,6 +264,15 @@ const fa = {
     name: "نام",
     saveChanges: "ذخیره تغییرات",
     cancel: "لغو",
+    requiredFields: "لطفاً تمام بخش‌ها را تکمیل کنید!",
+    invalidEmail: "لطفاً یک ایمیل معتبر وارد کنید!",
+    namePlaceholder: "نام کامل خود را وارد کنید",
+    emailPlaceholder: "ایمیل خود را وارد کنید",
+    phonePlaceholder: "شماره تلفن خود را وارد کنید",
+    invalidPhone: "لطفاً شماره تلفن معتبر وارد کنید!",
+    uploadPicture: "بارگذاری تصویر",
+    invalidImage: "لطفاً یک تصویر معتبر انتخاب کنید!",
+    imageTooLarge: "حجم تصویر باید کمتر از 1MB باشد!",
   },
   // lessons page
   lessons: {

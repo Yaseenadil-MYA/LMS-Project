@@ -240,6 +240,17 @@ const ps = {
     reactDescription: "React زده کړئ او عصري وېب اپلېکېشنونه جوړ کړئ.",
     phpDescription: "PHP زده کړئ او متحرکې وېبپاڼې جوړې کړئ.",
     mysqlDescription: "MySQL زده کړئ او ډیټابېسونه په مسلکي ډول اداره کړئ.",
+    // recent activity page
+    recentActivity: "وروستي فعالیتونه",
+    startedLearning: "د React js زده کړه یې پیل کړه",
+    completedLesson: "د HTML بنسټیز درس یې بشپړ کړ",
+    enrolledNewCourse: "په PHP کورس کې شامل شو",
+    today: "نن",
+    yesterday: "پرون",
+    twoDaysAgo: "دوه ورځې مخکې",
+    continueReact: "د React زده کړې ته دوام ورکړئ",
+    htmlUpdated: "د HTML کورس پرمختګ تازه شو",
+    newCourseStarted: "د نوي کورس زده کړه پیل شوه",
 
     footer: "© 2026 LMS. ټول حقونه خوندي دي.",
   },
@@ -255,6 +266,15 @@ const ps = {
     name: "نوم",
     saveChanges: "بدلونونه خوندي کول",
     cancel: "لغوه کول",
+    requiredFields: "مهرباني وکړئ ټول ځایونه ډک کړئ!",
+    invalidEmail: "مهرباني وکړئ سم ایمیل ولیکئ!",
+    namePlaceholder: "خپل بشپړ نوم ولیکئ",
+    emailPlaceholder: "خپل ایمیل ولیکئ",
+    phonePlaceholder: "خپل د ټیلیفون شمېره ولیکئ",
+    invalidPhone: "مهرباني وکړئ د ټیلیفون سمه شمېره ولیکئ!",
+    uploadPicture: "عکس پورته کړئ",
+    invalidImage: "مهرباني وکړئ یو سم عکس انتخاب کړئ!",
+    imageTooLarge: "د عکس اندازه باید له 1MB کمه وي!",
   },
   // lessons page
   lessons: {

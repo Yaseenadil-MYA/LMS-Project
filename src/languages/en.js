@@ -234,7 +234,17 @@ const en = {
     reactDescription: "Learn React.js and build modern web applications.",
     phpDescription: "Learn PHP and build dynamic websites.",
     mysqlDescription: "Learn MySQL and manage databases professionally.",
-
+    // recent activity page
+    recentActivity: "Recent Activity",
+    startedLearning: "Started learning React js",
+    completedLesson: "Completed HTML Basics",
+    enrolledNewCourse: "Enrolled in PHP",
+    today: "Today",
+    yesterday: "Yesterday",
+    twoDaysAgo: "2 days ago",
+    continueReact: "Continue your React journey",
+    htmlUpdated: "HTML course progress updated",
+    newCourseStarted: "Started a new learning course",
     footer: "© 2026 LMS. All rights reserved.",
   },
 
@@ -250,6 +260,15 @@ const en = {
     name: "Name",
     saveChanges: "Save Changes",
     cancel: "Cancel",
+    requiredFields: "Please fill in all fields!",
+    invalidEmail: "Please enter a valid email address!",
+    namePlaceholder: "Enter your full name",
+    emailPlaceholder: "Enter your email",
+    phonePlaceholder: "Enter your phone number",
+    invalidPhone: "Please enter a valid phone number!",
+    uploadPicture: "Upload Picture",
+    invalidImage: "Please select a valid image!",
+    imageTooLarge: "Image size must be less than 1MB!",
   },
   // lessons page
   lessons: {

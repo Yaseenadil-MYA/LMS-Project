@@ -1,10 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./StudentDashboard.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { LanguageContext } from "../context/LanguageContext";
 
 const StudentDashboard = () => {
   const { t } = useContext(LanguageContext);
+  // Detect current route
+  const location = useLocation();
+  // Update profile whenever Dashboard becomes active
+  useEffect(() => {
+    try {
+      const savedProfile =
+        JSON.parse(localStorage.getItem("studentProfile")) || {};
+
+      setStudentProfile(savedProfile);
+      setProfileImage(localStorage.getItem("profileImage") || "");
+    } catch (error) {
+      console.error("Error loading profile:", error);
+    }
+  }, [location]);
+  // Load student profile from localStorage
+  const [studentProfile, setStudentProfile] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("studentProfile")) || {};
+    } catch (error) {
+      return {};
+    }
+  });
+
+  const [profileImage, setProfileImage] = useState(() => {
+    return localStorage.getItem("profileImage") || "";
+  });
+
   const courses = [
     {
       id: 1,
@@ -87,9 +114,16 @@ const StudentDashboard = () => {
           </div>
 
           <div className="student-info">
-            <div className="student-avatar">Y</div>
+            <div className="student-avatar">
+              {profileImage ? (
+                <img src={profileImage} alt="Student Profile" />
+              ) : (
+                (studentProfile.name || "Y").charAt(0).toUpperCase()
+              )}
+            </div>
+
             <div>
-              <strong>Yasin</strong>
+              <strong>{studentProfile.name || "Yasin"}</strong>
               <small>{t.dashboard.online}</small>
             </div>
           </div>
@@ -177,6 +211,39 @@ const StudentDashboard = () => {
                 </Link>
               </div>
             ))}
+          </div>
+        </div>
+        {/* Recent Activity */}
+        <div className="recent-activity">
+          <h2>{t.dashboard.recentActivity}</h2>
+
+          <div className="activity-list">
+            <div className="activity-item">
+              <div className="activity-icon">📘</div>
+              <div className="activity-details">
+                <h4>{t.dashboard.startedLearning}</h4>
+                <p>{t.dashboard.continueReact}</p>
+              </div>
+              <span className="activity-time">{t.dashboard.today}</span>
+            </div>
+
+            <div className="activity-item">
+              <div className="activity-icon">✅</div>
+              <div className="activity-details">
+                <h4>{t.dashboard.completedLesson}</h4>
+                <p>{t.dashboard.htmlUpdated}</p>
+              </div>
+              <span className="activity-time">{t.dashboard.yesterday}</span>
+            </div>
+
+            <div className="activity-item">
+              <div className="activity-icon">🎓</div>
+              <div className="activity-details">
+                <h4>{t.dashboard.enrolledNewCourse}</h4>
+                <p>{t.dashboard.newCourseStarted}</p>
+              </div>
+              <span className="activity-time">{t.dashboard.twoDaysAgo}</span>
+            </div>
           </div>
         </div>
         <footer className="dashboard-footer">
