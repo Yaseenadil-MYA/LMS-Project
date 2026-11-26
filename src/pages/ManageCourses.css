@@ -1,0 +1,270 @@
+/* Main container */
+.manage-courses {
+  width: 100%;
+  min-height: 100vh;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+/* Light and Dark themes */
+.manage-courses.light-mode {
+  background: #f5f7fb;
+  color: #1e293b;
+}
+
+.manage-courses.dark-mode {
+  background: #111827;
+  color: #f1f5f9;
+}
+
+/* Header */
+.courses-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.courses-header h2 {
+  font-size: 25px;
+  margin: 0;
+}
+
+/* Add Course Button */
+.add-course-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-course-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Search */
+.course-search {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 15px;
+  margin-bottom: 22px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.course-search:focus {
+  border-color: #2563eb;
+}
+
+.dark-mode .course-search {
+  background: #1f2937;
+  color: white;
+  border-color: #475569;
+}
+
+/* Course Form */
+.course-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 650px;
+  padding: 22px;
+  margin-bottom: 25px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+.course-form h3 {
+  margin: 0 0 5px;
+  font-size: 20px;
+}
+
+.dark-mode .course-form {
+  background: #1f2937;
+}
+
+.course-form input,
+.course-form textarea,
+.course-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.course-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.dark-mode .course-form input,
+.dark-mode .course-form textarea,
+.dark-mode .course-form select {
+  background: #111827;
+  color: white;
+  border-color: #475569;
+}
+
+/* Form Buttons */
+.course-form-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.save-course-btn,
+.cancel-course-btn {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  color: white;
+}
+
+.save-course-btn {
+  background: #16a34a;
+}
+
+.cancel-course-btn {
+  background: #64748b;
+}
+
+/* Table Wrapper */
+.courses-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.dark-mode .courses-table-wrapper {
+  background: #1f2937;
+}
+
+/* Table */
+.courses-table {
+  width: 100%;
+  min-width: 750px;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.courses-table th,
+.courses-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.courses-table th {
+  background: #eff6ff;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.dark-mode .courses-table th {
+  background: #263449;
+  color: #93c5fd;
+}
+
+.dark-mode .courses-table td {
+  border-color: #374151;
+}
+
+.courses-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.dark-mode .courses-table tbody tr:hover {
+  background: #263449;
+}
+
+/* Action Buttons */
+.course-action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-course-btn,
+.delete-course-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-course-btn {
+  background: #2563eb;
+}
+
+.delete-course-btn {
+  background: #dc2626;
+}
+
+.edit-course-btn:hover {
+  background: #1d4ed8;
+}
+
+.delete-course-btn:hover {
+  background: #b91c1c;
+}
+
+/* Empty Result */
+.no-courses {
+  text-align: center;
+  padding: 25px !important;
+  color: #64748b;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .manage-courses {
+    padding: 15px;
+  }
+
+  .courses-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .courses-header h2 {
+    font-size: 21px;
+  }
+
+  .add-course-btn {
+    width: 100%;
+  }
+
+  .course-form {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manage-courses {
+    padding: 10px;
+  }
+
+  .course-form-actions {
+    flex-direction: column;
+  }
+
+  .course-form-actions button {
+    width: 100%;
+  }
+}

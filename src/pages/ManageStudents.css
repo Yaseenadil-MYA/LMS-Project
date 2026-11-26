@@ -1,0 +1,265 @@
+
+/* Main Container */
+.manage-students {
+  min-height: 100vh;
+  padding: 30px;
+  transition: 0.3s ease;
+}
+
+/* Light Mode */
+.manage-students.light-mode {
+  background: #f4f6fb;
+  color: #1e293b;
+}
+
+/* Dark Mode */
+.manage-students.dark-mode {
+  background: #0f172a;
+  color: #f8fafc;
+}
+
+/* Header */
+.students-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.students-header h1 {
+  margin: 0;
+  font-size: 27px;
+}
+
+/* Add Button */
+.add-student-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.add-student-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Search */
+.students-search {
+  margin-bottom: 20px;
+}
+
+.students-search input {
+  width: 100%;
+  max-width: 400px;
+  padding: 13px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.light-mode .students-search input,
+.light-mode .student-form input,
+.light-mode .student-form select {
+  background: white;
+  color: #1e293b;
+}
+
+.dark-mode .students-search input,
+.dark-mode .student-form input,
+.dark-mode .student-form select {
+  background: #1e293b;
+  color: white;
+  border-color: #475569;
+}
+
+/* Form */
+.student-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+}
+
+.light-mode .student-form {
+  background: white;
+}
+
+.dark-mode .student-form {
+  background: #1e293b;
+}
+
+.student-form input,
+.student-form select {
+  flex: 1;
+  min-width: 180px;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  outline: none;
+}
+
+.student-form button {
+  padding: 12px 20px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.student-form .cancel-btn {
+  background: #64748b;
+}
+
+/* Table Wrapper */
+.students-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.light-mode .students-table-wrapper {
+  background: white;
+}
+
+.dark-mode .students-table-wrapper {
+  background: #1e293b;
+}
+
+/* Table */
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.students-table th,
+.students-table td {
+  padding: 16px;
+  text-align: start;
+  white-space: nowrap;
+}
+
+.light-mode .students-table th {
+  background: #eaf0f8;
+}
+
+.dark-mode .students-table th {
+  background: #334155;
+  color: white;
+}
+
+.light-mode .students-table td {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.dark-mode .students-table td {
+  border-bottom: 1px solid #334155;
+}
+
+/* Status */
+.student-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.student-badge.active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.student-badge.inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* Action Buttons */
+.student-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn,
+.delete-btn {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background: #2563eb;
+}
+
+.delete-btn {
+  background: #dc2626;
+}
+
+.edit-btn:hover {
+  background: #1d4ed8;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.no-students {
+  text-align: center !important;
+  padding: 30px !important;
+}
+
+/* Responsive */
+@media (max-width: 775px) {
+  .manage-students {
+    padding: 20px;
+  }
+
+  .students-header h1 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 500px) {
+  .manage-students {
+    padding: 12px;
+  }
+
+  .students-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .students-header h1 {
+    font-size: 20px;
+  }
+
+  .add-student-btn {
+    width: 100%;
+  }
+
+  .students-search input {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .student-form {
+    flex-direction: column;
+  }
+
+  .student-form input,
+  .student-form select {
+    box-sizing: border-box;
+    width: 100%;
+  }
+}

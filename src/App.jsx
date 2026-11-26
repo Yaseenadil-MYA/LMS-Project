@@ -17,6 +17,7 @@ import Mycourses from "./pages/Mycourses";
 import Lessons from "./pages/Lessons";
 import LessonDetails from "./pages/LessonDetails";
 import Profile from "./pages/Profile";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const App = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -41,6 +42,7 @@ const App = () => {
           />
 
           <Route path="/profile" element={<Profile />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -7,6 +7,8 @@ import "./LessonDetails.css";
 const LessonDetails = () => {
   // Get courseId and lessonId from URL
   const { courseId, lessonId } = useParams();
+  console.log("Course ID:", courseId);
+  console.log("Lesson ID:", lessonId);
 
   // Used for Previous and Next Lesson
   const navigate = useNavigate();
@@ -386,8 +388,30 @@ const LessonDetails = () => {
   const lesson = lessons[courseId]?.[lessonId];
   const lessonTitle = lesson?.title?.[language] || lesson?.title?.en;
   const lessonContent = lesson?.content?.[language] || lesson?.content?.en;
-  // Store lesson completion status
-  const [completed, setCompleted] = useState(false);
+
+  // Load completed lessons from localStorage
+  const [completedLessons, setCompletedLessons] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem("completedLessons") || "{}");
+    } catch (error) {
+      return {};
+    }
+  });
+
+  // Check if current lesson is completed
+  const completed = Boolean(completedLessons[`${courseId}-${lessonId}`]);
+
+  // Save lesson completion status
+  const handleComplete = () => {
+    const updatedLessons = {
+      ...completedLessons,
+      [`${courseId}-${lessonId}`]: true,
+    };
+
+    localStorage.setItem("completedLessons", JSON.stringify(updatedLessons));
+
+    setCompletedLessons(updatedLessons);
+  };
 
   // Get total lessons of current course
   const totalLessons = Object.keys(lessons[courseId] || {}).length;
@@ -401,10 +425,14 @@ const LessonDetails = () => {
   // Next lesson number
   const nextLesson = currentLesson + 1;
 
-  // Calculate progress
-  const progress = completed
-    ? Math.round((currentLesson / totalLessons) * 100)
-    : Math.round(((currentLesson - 1) / totalLessons) * 100);
+  // Count completed lessons in current course
+  const completedCount = Object.keys(lessons[courseId] || {}).filter((id) => {
+    return completedLessons[`${courseId}-${id}`] === true;
+  }).length;
+
+  // Calculate actual course progress
+  const progress =
+    totalLessons > 0 ? Math.round((completedCount / totalLessons) * 100) : 0;
 
   // If lesson does not exist
   if (!lesson) {
@@ -443,7 +471,7 @@ const LessonDetails = () => {
           ></div>
         </div>
       </div>
-      <button className="complete-btn" onClick={() => setCompleted(true)}>
+      <button className="complete-btn" onClick={handleComplete}>
         {completed
           ? `${t.lessonDetails.completed} ✓`
           : t.lessonDetails.markComplete}
