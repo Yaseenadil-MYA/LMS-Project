@@ -1,0 +1,186 @@
+
+.manage-lessons {
+  width: 100%;
+  padding: 25px;
+  min-height: 100%;
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+.manage-lessons h2 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.lessons-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.add-lesson-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 11px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.add-lesson-btn:hover {
+  background: #1d4ed8;
+}
+
+.lesson-search {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  margin-bottom: 22px;
+  outline: none;
+  font-size: 14px;
+}
+
+.lesson-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.lesson-form input,
+.lesson-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+}
+
+.lesson-form button {
+  padding: 11px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-size: 14px;
+}
+
+.lesson-form button[type="button"] {
+  background: #64748b;
+}
+
+.lessons-table-container {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 10px;
+}
+
+.lessons-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 650px;
+}
+
+.lessons-table th,
+.lessons-table td {
+  padding: 14px;
+  text-align: start;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.lessons-table th {
+  background: #f1f5f9;
+  font-weight: 700;
+}
+
+.lessons-table td button {
+  padding: 7px 12px;
+  margin: 3px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+.lessons-table td button:last-child {
+  background: #dc2626;
+}
+
+/* Light Mode */
+.manage-lessons.light-mode {
+  background: #ffffff;
+  color: #1e293b;
+}
+
+.manage-lessons.light-mode .lesson-search,
+.manage-lessons.light-mode .lesson-form input,
+.manage-lessons.light-mode .lesson-form select {
+  background: white;
+  color: #1e293b;
+}
+
+/* Dark Mode */
+.manage-lessons.dark-mode {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.manage-lessons.dark-mode .lesson-search,
+.manage-lessons.dark-mode .lesson-form input,
+.manage-lessons.dark-mode .lesson-form select,
+.manage-lessons.dark-mode .lesson-form {
+  background: #334155;
+  color: #f8fafc;
+  border-color: #475569;
+}
+
+.manage-lessons.dark-mode .lessons-table th {
+  background: #334155;
+  color: white;
+}
+
+.manage-lessons.dark-mode .lessons-table td {
+  border-color: #475569;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .manage-lessons {
+    padding: 15px;
+  }
+
+  .lessons-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .lesson-form {
+    grid-template-columns: 1fr;
+  }
+
+  .manage-lessons h2 {
+    font-size: 21px;
+  }
+}
+
+@media (max-width: 480px) {
+  .manage-lessons {
+    padding: 10px;
+  }
+
+  .add-lesson-btn {
+    width: 100%;
+  }
+}

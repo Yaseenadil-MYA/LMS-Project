@@ -2,6 +2,9 @@ import React, { useState, useContext } from "react";
 import { LanguageContext } from "../context/LanguageContext";
 import { ThemeContext } from "../context/ThemeContext";
 import ManageCourses from "./ManageCourses";
+import ManageTeachers from "./ManageTeachers";
+import ManageLessons from "./ManageLessons";
+import ManageQuizzes from "./ManageQuizzes";
 import "./AdminDashboard.css";
 import ManageStudents from "./ManageStudents";
 
@@ -262,9 +265,15 @@ const AdminDashboard = () => {
           </>
         ) : activePage === "students" ? (
           <ManageStudents />
-        ) : activePage === "courses" ? (
-          <ManageCourses />
-        ) : (
+      ) : activePage === "courses" ? (
+  <ManageCourses />
+) : activePage === "teachers" ? (
+  <ManageTeachers />
+) : activePage === "lessons" ? (
+  <ManageLessons />
+) : activePage === "quizzes" ? (
+  <ManageQuizzes />
+) : (
           <section className="admin-table-section">
             <h2>{menuItems.find((item) => item.id === activePage)?.label}</h2>
 
