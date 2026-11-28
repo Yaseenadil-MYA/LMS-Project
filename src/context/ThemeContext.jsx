@@ -1,16 +1,25 @@
-import React, { createContext, useState } from "react";
+
+import React, { createContext, useState, useEffect } from "react";
 
 // Create Theme Context
 export const ThemeContext = createContext();
 
 const ThemeProvider = ({ children }) => {
 
-  // Store current theme
-  const [darkMode, setDarkMode] = useState(false);
+  // Get saved theme from localStorage
+  const [darkMode, setDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("darkMode");
+    return savedTheme === "true";
+  });
+
+  // Save theme whenever it changes
+  useEffect(() => {
+    localStorage.setItem("darkMode", darkMode);
+  }, [darkMode]);
 
   // Toggle between Light and Dark Mode
   const toggleTheme = () => {
-    setDarkMode(!darkMode);
+    setDarkMode((prevMode) => !prevMode);
   };
 
   return (

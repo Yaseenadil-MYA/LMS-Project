@@ -1,10 +1,15 @@
-// import React from "react";
+
 import React, { useContext } from "react";
 import { ThemeContext } from "./context/ThemeContext";
-
 import Navbar from "./components/Navbar";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  useLocation
+} from "react-router-dom";
+
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Curses from "./pages/Curses";
@@ -21,39 +26,60 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminLogin from "./pages/AdminLogin";
 import ProtectedRoute from "./components/ProtectedRoute";
 
+// Main App Content
+function AppContent() {
+  const location = useLocation();
+
+  const hideNavbar =
+    location.pathname === "/admin" ||
+    location.pathname === "/admin-login";
+
+  return (
+    <>
+      {!hideNavbar && <Navbar />}
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/courses" element={<Curses />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contect />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/courses/:id" element={<CourseDetails />} />
+        <Route path="/studentdashboard" element={<StudentDashboard />} />
+        <Route path="/my-courses" element={<Mycourses />} />
+        <Route path="/lessons/:id" element={<Lessons />} />
+
+        <Route
+          path="/lessons/:courseId/lesson/:lessonId"
+          element={<LessonDetails />}
+        />
+
+        <Route path="/profile" element={<Profile />} />
+
+        <Route path="/admin-login" element={<AdminLogin />} />
+
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminDashboard />
+            </ProtectedRoute>
+          }
+        />
+      </Routes>
+    </>
+  );
+}
+
+// Main App
 const App = () => {
   const { darkMode } = useContext(ThemeContext);
+
   return (
     <div className={darkMode ? "dark-mode" : "light-mode"}>
       <BrowserRouter>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/courses" element={<Curses />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contect />} />
-          <Route path="login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/courses/:id" element={<CourseDetails />} />
-          <Route path="/studentdashboard" element={<StudentDashboard />} />
-          <Route path="/my-courses" element={<Mycourses />} />
-          <Route path="/lessons/:id" element={<Lessons />} />
-          <Route
-            path="/lessons/:courseId/lesson/:lessonId"  
-            element={<LessonDetails />}
-          />
-
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/admin-login" element={<AdminLogin />} />
-          <Route
-            path="/admin"
-            element={
-              <ProtectedRoute>
-                <AdminDashboard />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
+        <AppContent />
       </BrowserRouter>
     </div>
   );
