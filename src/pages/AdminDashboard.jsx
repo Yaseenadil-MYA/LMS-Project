@@ -5,6 +5,9 @@ import ManageCourses from "./ManageCourses";
 import ManageTeachers from "./ManageTeachers";
 import ManageLessons from "./ManageLessons";
 import ManageQuizzes from "./ManageQuizzes";
+import ManageReports from "./ManageReports";
+import ManageSettings from "./ManageSettings";
+import { useNavigate } from "react-router-dom";
 import "./AdminDashboard.css";
 import ManageStudents from "./ManageStudents";
 
@@ -13,6 +16,12 @@ const AdminDashboard = () => {
   const { darkMode } = useContext(ThemeContext);
 
   const [activePage, setActivePage] = useState("dashboard");
+  const navigate = useNavigate();
+  // logout function
+  const handleLogout = () => {
+  localStorage.removeItem("adminLoggedIn");
+  navigate("/admin-login");
+};
 
   // Dashboard translations
   const translations = {
@@ -192,7 +201,9 @@ const AdminDashboard = () => {
           ))}
         </nav>
 
-        <button className="admin-logout">🚪 {t.logout}</button>
+       <button className="admin-logout" onClick={handleLogout}>
+  🚪 {t.logout}
+</button>
       </aside>
 
       {/* Main Content */}
@@ -273,7 +284,12 @@ const AdminDashboard = () => {
   <ManageLessons />
 ) : activePage === "quizzes" ? (
   <ManageQuizzes />
+) : activePage === "reports" ? (
+  <ManageReports />
+) : activePage === "settings" ? (
+  <ManageSettings />  
 ) : (
+
           <section className="admin-table-section">
             <h2>{menuItems.find((item) => item.id === activePage)?.label}</h2>
 

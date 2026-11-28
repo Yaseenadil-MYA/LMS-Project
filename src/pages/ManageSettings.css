@@ -1,0 +1,180 @@
+
+/* Main Container */
+.manage-settings {
+  padding: 25px;
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #222;
+  transition: 0.3s ease;
+}
+
+.manage-settings.dark-mode {
+  background: #151b2b;
+  color: #f1f1f1;
+}
+
+/* Header */
+.settings-header {
+  margin-bottom: 25px;
+}
+
+.settings-header h2 {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+.settings-header p {
+  color: #777;
+  margin: 0;
+}
+
+.dark-mode .settings-header p {
+  color: #bbb;
+}
+
+/* Form */
+.settings-form {
+  max-width: 850px;
+}
+
+/* Settings Cards */
+.settings-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 22px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .settings-card {
+  background: #202a3e;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.settings-card h3 {
+  font-size: 19px;
+  margin: 0 0 22px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.dark-mode .settings-card h3 {
+  border-bottom-color: #39445a;
+}
+
+/* Input Groups */
+.settings-group {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+}
+
+.settings-group:last-child {
+  margin-bottom: 0;
+}
+
+.settings-group label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.settings-group input,
+.settings-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.settings-group input:focus,
+.settings-group select:focus {
+  border-color: #4169e1;
+  box-shadow: 0 0 0 3px rgba(65, 105, 225, 0.1);
+}
+
+.dark-mode .settings-group input,
+.dark-mode .settings-group select {
+  background: #151b2b;
+  color: #f1f1f1;
+  border-color: #39445a;
+}
+
+/* Notification Toggles */
+.settings-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.settings-toggle:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.dark-mode .settings-toggle {
+  border-bottom-color: #39445a;
+}
+
+/* Checkbox */
+.settings-toggle input {
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  accent-color: #4169e1;
+}
+
+/* Save Button */
+.settings-save-btn {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #4169e1;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.settings-save-btn:hover {
+  background: #3154c5;
+  transform: translateY(-2px);
+}
+
+/* Success Message */
+.settings-success {
+  color: #16834a;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .manage-settings {
+    padding: 15px;
+  }
+
+  .settings-header h2 {
+    font-size: 22px;
+  }
+
+  .settings-card {
+    padding: 18px;
+  }
+
+  .settings-save-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,204 @@
+
+/* Main Container */
+.manage-reports {
+  padding: 25px;
+  min-height: 100vh;
+  background: #f5f7fb;
+  color: #222;
+  transition: 0.3s ease;
+}
+
+/* Dark Mode */
+.manage-reports.dark-mode {
+  background: #151b2b;
+  color: #f1f1f1;
+}
+
+/* Header */
+.reports-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.reports-header h2 {
+  font-size: 26px;
+  margin: 0 0 8px;
+}
+
+.reports-header p {
+  color: #777;
+  margin: 0;
+}
+
+.dark-mode .reports-header p {
+  color: #bbb;
+}
+
+/* Statistics Cards */
+.reports-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.report-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 22px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+  transition: 0.3s ease;
+}
+
+.dark-mode .report-stat-card {
+  background: #202a3e;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+}
+
+.report-stat-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  background: #e8efff;
+  border-radius: 12px;
+}
+
+.report-stat-card h3 {
+  font-size: 25px;
+  margin: 0 0 5px;
+}
+
+.report-stat-card p {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.dark-mode .report-stat-card p {
+  color: #bbb;
+}
+
+/* Course Report Section */
+.course-report-section,
+.reports-activity {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode .course-report-section,
+.dark-mode .reports-activity {
+  background: #202a3e;
+}
+
+.course-report-section h3,
+.reports-activity h3 {
+  margin: 0 0 20px;
+  font-size: 20px;
+}
+
+/* Table */
+.course-report-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.course-report-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 450px;
+}
+
+.course-report-table th,
+.course-report-table td {
+  padding: 14px;
+  text-align: start;
+  border-bottom: 1px solid #eee;
+}
+
+.dark-mode .course-report-table th,
+.dark-mode .course-report-table td {
+  border-bottom: 1px solid #39445a;
+}
+
+.course-report-table th {
+  background: #f1f4fa;
+  font-weight: 600;
+}
+
+.dark-mode .course-report-table th {
+  background: #29364d;
+}
+
+/* Recent Activity */
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.dark-mode .activity-item {
+  border-bottom: 1px solid #39445a;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #edf2ff;
+  border-radius: 50%;
+  font-size: 20px;
+}
+
+.activity-item p {
+  margin: 0 0 5px;
+  font-size: 15px;
+}
+
+.activity-item small {
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 1000px) {
+  .reports-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .manage-reports {
+    padding: 15px;
+  }
+
+  .reports-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-header h2 {
+    font-size: 22px;
+  }
+
+  .course-report-section,
+  .reports-activity {
+    padding: 15px;
+  }
+}

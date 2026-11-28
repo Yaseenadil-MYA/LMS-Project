@@ -18,6 +18,8 @@ import Lessons from "./pages/Lessons";
 import LessonDetails from "./pages/LessonDetails";
 import Profile from "./pages/Profile";
 import AdminDashboard from "./pages/AdminDashboard";
+import AdminLogin from "./pages/AdminLogin";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const App = () => {
   const { darkMode } = useContext(ThemeContext);
@@ -37,12 +39,20 @@ const App = () => {
           <Route path="/my-courses" element={<Mycourses />} />
           <Route path="/lessons/:id" element={<Lessons />} />
           <Route
-            path="/lessons/:courseId/lesson/:lessonId"
+            path="/lessons/:courseId/lesson/:lessonId"  
             element={<LessonDetails />}
           />
 
           <Route path="/profile" element={<Profile />} />
-          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </BrowserRouter>
     </div>
